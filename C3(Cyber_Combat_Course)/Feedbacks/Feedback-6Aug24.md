@@ -1,6 +1,5 @@
 # INE
 # Assessment Methodologies: Information Gathering
-
 ## Passive Information Gathering
 - Test your knowledge: Subdomain Enumeration With Sublist3r
 - Google Dorks
@@ -28,3 +27,8 @@
 - Transport Layer - Part 1
 - Transport Layer - Part 2
 - Test your knowledge: Transport Layer - Part 2
+##### Host Discovery
+- Network Mapping
+- Test your knowledge: Network Mapping
+- Host Discovery Techniques
+- Test your knowledge: Host Discovery Techniques
