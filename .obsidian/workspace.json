@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "daa6d1a54ba42ee6",
+    "type": "split",
+    "children": [
+      {
+        "id": "88ec9435f69e6314",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "757f98126e2304f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "26a111b59596e64f",
+    "type": "split",
+    "children": [
+      {
+        "id": "de397c44ca07f8a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f66f15268380b7a3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "93892e5bb193b2a7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5b3f4b846e74c6d2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "efb2a2a0c8a9a394",
+    "type": "split",
+    "children": [
+      {
+        "id": "061615244cf27203",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d1960112a9754427",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7c5086a2b0881b94",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "de94d36da312ee1a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1811e30d7c5cce00",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "757f98126e2304f1",
+  "lastOpenFiles": [
+    "INE EJPTv2/Information Gathering.md",
+    "README.md",
+    "C3 (Cyber Combat Course)/C3 Orientation.md",
+    "Feedbacks/Feedback - 5 Aug 24.md",
+    "Feedbacks",
+    "Untitled.canvas",
+    "INE EJPTv2",
+    "C3 (Cyber Combat Course)"
+  ]
+}
