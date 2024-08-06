@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "INE EJPTv2/Information Gathering.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "INE EJPTv2/Information Gathering.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "INE EJPTv2/Information Gathering.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "INE EJPTv2/Information Gathering.md"
+                "file": "README.md"
               }
             }
           }
@@ -146,13 +146,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "757f98126e2304f1",
+  "active": "f66f15268380b7a3",
   "lastOpenFiles": [
-    "README.md",
     "INE EJPTv2/Information Gathering.md",
+    "README.md",
     "C3 (Cyber Combat Course)/C3 Orientation.md",
-    "Feedbacks/Feedback - 5 Aug 24.md",
-    "Feedbacks",
+    "C3 (Cyber Combat Course)/Feedbacks/Feedback - 5 Aug 24.md",
+    "C3 (Cyber Combat Course)/Feedbacks",
     "Untitled.canvas",
     "INE EJPTv2",
     "C3 (Cyber Combat Course)"
