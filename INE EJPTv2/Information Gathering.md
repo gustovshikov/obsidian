@@ -1,8 +1,8 @@
 
 # INDEX
-[Intro](#Intro)
-[Passive Gathering](#Passive-Gathering)
-[Active Gathering](#Active-Gathering)
+1. [Intro](#Intro)
+2. [Passive Gathering](#Passive-Gathering)
+3. [Active Gathering](#Active-Gathering)
 
 
 ## #Intro
