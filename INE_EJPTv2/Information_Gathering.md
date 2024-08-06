@@ -1,11 +1,12 @@
 
 # INDEX
-1. [Intro](#Intro)
-2. [Passive Gathering](#Passive-Gathering)
-3. [Active Gathering](#Active-Gathering)
+1. [Overview](#Overview)
+2. [Resources](#Resources)
+3. [Gathering or Enumeration](#Gathering-Enumeration)
+	1. [Tools](#Tools)
+	2. [Web Scouring](#Website-Scouring)
 
-
-## #Intro
+## #Overview
 - first stage of pen test
 - more info the better
 - passive and active types
@@ -22,12 +23,18 @@
 		- internal infrastructure
 		- technologies/services
 
-# #Passive-Gathering
+# #Resources
+## Practice Sites
+- zonetransfer.me
+	- can practice dns zone transfers
+
+# #Gathering-Enumeration
 
 ## website Recon & Footprinting
 
-### Tools
+### #Tools
 ##### Terminal
+###### Passive
 - host
 	- DNS lookup utility
 	- multiple IP usually indicate proxying services ex. CloudFlare
@@ -45,6 +52,34 @@
 	- subdomain information
 	- python script
 	- uses search engines and other tools to query information
+- theharvester
+	- OSINT tool for gathering emails, names, subdomains, ip/url
+	- helps if you specify engines manually, github has list
+###### Active
+- dnsenum
+	- DNS records
+	- can perform zone transfer
+	- brute-force
+- dig
+	- axfr - switches for zonetransfer
+- fierce
+	- ip & domain scanner
+	- brute-force or wordlist
+	- zonetransfer
+	- quick lightweight
+	- great before nmap
+- [nmap](../Tools/NMAP.md) 
+	- -sn : no port scan, ping sweep host discovery
+	- -Pn : target scan common ports, syn stealth
+		- -p- to scan all ports or -p1-1000
+		- -F top 100 ports
+		- -sU udp scan
+	- -sV : service version detection
+	- -O : OS detection
+	- -sC : default scripts
+	- -A : combines -sV -O -sC
+	- -T0 : 0 - 5 from paranoid to sneaky to insane
+	- -oN : output to file, several formats available
 ##### Applications
 - HTTrack
 	- can be blocked by site
@@ -60,7 +95,12 @@
 - dnsdumpster
 	- grabs dns record information
 	- subdomain A records
-### Website scouring
+- Google Dorking
+	- https://www.exploit-db.com/google-hacking-database
+	- limit results to site subdomain site:\*.site.com
+- Have I been pwned
+	- https://haveibeenpwned.com/Passwords
+### #Website-Scouring
 ##### On site
 - robots.txt
 	- text file information for crawlers
@@ -75,6 +115,4 @@
 - Wappalyzer - requires account?
 	- identifies technologies on website
 
-
-# #Active-Gathering
 
