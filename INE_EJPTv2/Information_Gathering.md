@@ -1,5 +1,4 @@
-
-# INDEX
+# Table of Contents
 1. [Overview](#Overview)
 2. [Resources](#Resources)
 3. [Gathering or Enumeration](#Gathering-Enumeration)
@@ -69,17 +68,6 @@
 	- quick lightweight
 	- great before nmap
 - [nmap](../Tools/NMAP.md) 
-	- -sn : no port scan, ping sweep host discovery
-	- -Pn : target scan common ports, syn stealth
-		- -p- to scan all ports or -p1-1000
-		- -F top 100 ports
-		- -sU udp scan
-	- -sV : service version detection
-	- -O : OS detection
-	- -sC : default scripts
-	- -A : combines -sV -O -sC
-	- -T0 : 0 - 5 from paranoid to sneaky to insane
-	- -oN : output to file, several formats available
 ##### Applications
 - HTTrack
 	- can be blocked by site

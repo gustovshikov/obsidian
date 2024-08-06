@@ -1,4 +1,4 @@
-# Index
+# Table of Contents
 1. [Overview](#Overview)
 2. [Tools](#Tools)
 

@@ -1,4 +1,4 @@
-# Index
+# Table of Contents
 1. [General Information](#General_Information)
 	1. Hours
 	2. Wifi
@@ -51,6 +51,7 @@ Fridays are full remote
 - Windows Fundamentals Part 1
 - Windows Fundamentals Part 2
 - Windows Fundamentals Part 3
+
 ## #Red_Phase
 ### INE
 #### Assessment Methodologies: Information Gathering
@@ -128,7 +129,9 @@ Fridays are full remote
 
 
 ### TryHackMe 
+
 ### Youtube
+
 ## #Blue_Phase
 ### BTL1
 
