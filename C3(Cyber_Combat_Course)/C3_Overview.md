@@ -2,14 +2,28 @@
 1. [General Information](#General_Information)
 	1. Hours
 	2. Wifi
-2. Sections
+2. Roadmap
 	1. [Fundamentals](#Fundamentals)
 		1. TryHackme
-	2. [Red Phase](#Red_Phase)
+			1. Introduction to Cyber Security
+			2. Networking Fundamentals
+			3. How the Web Works
+			4. Linux Fundamentals
+			5. Windows Fundamentals
+	3. [Red Phase](#Red_Phase)
 		1. INE EJPT
-		2. Youtube
-		3. TryHackMe
-	3. [Blue Phase](#Blue_Phase)
+		2. TryHackMe
+			1. Junior Penetration Tester Path
+		3. Youtube Playlist
+			1. Buffer Overflows Made Easy
+		4. TryHackMe
+			1. Complete Beginner's Path
+			2. Offensive Pentesting Path
+	4. [Blue Phase](#Blue_Phase)
+		1. Security Blue Team- BTL1
+		2. TryHackMe
+			1. SOC Level 1
+			2. Cyber Defense
 
 # #General_Information
 
@@ -26,7 +40,7 @@ Fridays are full remote
 - SSID: Aspen
 - PASS: PE\^25fWq
 
-# Sections
+# Roadmap
 ## #Fundamentals
 ### TryHackMe
 ##### Introduction to Cyber Security
