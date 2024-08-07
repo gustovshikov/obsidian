@@ -1,6 +1,9 @@
 # Table of Contents
 1. [Overview](#Overview)
 2. [Tools](#Tools)
+3. [Host Discovery](#Host_Discovery)
+	1. [Types of Scanning](#Types_of_Scanning)
+	2. [TCP Three way handshake](#TCP_Three_way_handshake)
 
 # #Overview
 After gaining initial access and information you need to gather more in depth information. This involved building a network map and versions of services that are running on devices as well as operating systems. This is valuable to know as the next step will build upon this information to discover vulnerabilities to exploit.
@@ -26,7 +29,7 @@ After gaining initial access and information you need to gather more in depth in
 
 # Host_Discovery
 Mostly just use nmap to gather details on Tagets, Services/Versions, and OSs
-## Types of Scanning
+## Types_of_Scanning
 - ping sweeps
 	- ICMP echo requests
 - ARP Scanning
@@ -41,12 +44,12 @@ Mostly just use nmap to gather details on Tagets, Services/Versions, and OSs
 	- send TCP ACK and listen for reset if port is open
 - SYN-ACK Ping
 	- send SYN-ACK and listen for reset if port is open
-## TCP Three way handshake
-## Connection Establishment
-**Client ---->> SYN** ----->> Server
-Client <<-- **SYN-ACK <<-- Server**
-**Client ---->> ACK** ----->> Server
-## Connection Termination
-**Client ---->> FIN** ----->> Server
-Client <<-- **FIN-ACK <<-- Server**
-**Client ---->> ACK** ----->> Server
+## TCP_Three_way_handshake
+### Connection Establishment
+1. **Client ---->> SYN** ----->> Server
+2. Client <<-- **SYN-ACK <<-- Server**
+3. **Client ---->> ACK** ----->> Server
+### Connection Termination
+1. **Client ---->> FIN** ----->> Server
+2. Client <<-- **FIN-ACK <<-- Server**
+3. **Client ---->> ACK** ----->> Server
