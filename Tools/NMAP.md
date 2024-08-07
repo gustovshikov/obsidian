@@ -3,10 +3,17 @@
 # Table of Contents
 1. [Examples](#Examples)
 2. [Options](#Options)
+	1. Host discovery
+	2. Port enumeration
+	3. Service and OS Enumeration
+	4. Additional options
+		3. Timing
+		4. Output
 3. [Arguments](#Arguments)
-4. [Nmap Scripting Engine (NSE)](#Nmap%20Scripting%20Engine%20(NSE))
-5. [Ports](#Ports)
-6. [Index](#Index)
+4. [Nmap Scripting Engine (NSE)](#Nmap_Scripting_Engine_(NSE))
+5. [Firewall avoidance](#Firewall_Avoidance)
+6. [Ports](#Ports)
+7. [Index](#Index)
 
 # Usage: nmap \[Scan Type(s)\] \[Options\] {target specification}
 # #Examples
@@ -46,14 +53,23 @@
 - -A : combines -sV -O -sC and traceroute
 ### Additional options
 - -v : verbose
-- -T0 : 0 - 5 from paranoid to sneaky to insane
-- -oN : output to file, several formats available
+##### Timing
+- -T0 : Timing Templates
+	- 0 - 5 from paranoid, sneaky, polite, default, aggressive, to insane
+- --scan-delay/--max-scan-delay \<time\> : Adjust time between packets
+- -- host-timeout \<time\> : give up after this time
+##### Output
+- -oN : normal format
+- -oX : XML output : can import to metasploit framework
+- -oS : script kiddie
+- -oG : grepable format
+- -oA : normal, XML, and grepable files
 # #Arguments
 ### Targets
 - can specify multiple IPs as multiple arguments
 - 10.0.0-255.1-254 or just use CIDR
 - -iL : provide IP list by file
-# Nmap Scripting Engine (NSE)
+# Nmap_Scripting_Engine_(NSE)
 Feature that allows you to write automation scripts. Nmap comes with a collection of default scripts.
 - /usr/share/nmap/scripts : Default location
 -  extension .nse
@@ -62,7 +78,7 @@ Feature that allows you to write automation scripts. Nmap comes with a collectio
 	- based on open ports found
 	- --script-help=mongodb-databases : information on script
 	- --script=mongodb-info : run specific script, category, directory
-# Firewall avoidance
+# Firewall_Avoidance
 - -sA : ACK scan : can see if unfiltered vs SYN scan
 - --ttl : set time-to-live
 - --data-length : Append random data to packets
