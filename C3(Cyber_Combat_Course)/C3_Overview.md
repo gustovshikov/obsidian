@@ -7,7 +7,8 @@
 		1. TryHackme
 	2. [Red Phase](#Red_Phase)
 		1. INE EJPT
-		2. TryHackMe
+		2. Youtube
+		3. TryHackMe
 	3. [Blue Phase](#Blue_Phase)
 
 # #General_Information
@@ -54,7 +55,7 @@ Fridays are full remote
 
 ## #Red_Phase
 ### INE
-#### Assessment Methodologies: Information Gathering
+### Assessment Methodologies: Information Gathering
 -  Introduction - Course Introduction
 -  Introduction To Information Gathering
 -  Test your knowledge: Introduction To Information Gathering
@@ -82,7 +83,8 @@ Fridays are full remote
 - Test your knowledge: Port Scanning With Nmap
 - Windows Recon: Nmap Host Discovery Cyber Security
 - Conclusion - Course Conclusion
-#### Assessment Methodologies: Footprinting & Scanning
+
+### Assessment Methodologies: Footprinting & Scanning
 - Introduction - Course Introduction
 - Active Information Gathering
 - Test your knowledge: Active Information Gathering

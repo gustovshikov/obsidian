@@ -3,7 +3,7 @@
 2. [Tools](#Tools)
 
 # #Overview
-After gaining initial access you need to gather more in depth information on ports and services that are running. 
+After gaining initial access and information you need to gather more in depth information. This involved building a network map and versions of services that are running on devices as well as operating systems. This is valuable to know as the next step will build upon this information to discover vulnerabilities to exploit.
 - network mapping
 - host discovery
 - port scanning
@@ -12,7 +12,7 @@ After gaining initial access you need to gather more in depth information on por
 - saving output from scans!
 
 # #Tools
-- [nmap](../Tools/NMAP.md)
+- [nmap](../Tools/NMAP.md) **<- Go Here**
 - wireshark
 	- packet capture - pcap
 - netstat
@@ -25,6 +25,7 @@ After gaining initial access you need to gather more in depth information on por
 	- can specify larger number of targets
 
 # Host_Discovery
+Mostly just use nmap to gather details on Tagets, Services/Versions, and OSs
 ## Types of Scanning
 - ping sweeps
 	- ICMP echo requests
@@ -40,4 +41,3 @@ After gaining initial access you need to gather more in depth information on por
 	- send TCP ACK and listen for reset if port is open
 - SYN-ACK Ping
 	- send SYN-ACK and listen for reset if port is open
--

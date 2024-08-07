@@ -6,7 +6,7 @@
 	2. [Web Scouring](#Website-Scouring)
 
 ## #Overview
-- first stage of pen test
+First stage of penetration test. Gather passive knowledge of targets through open source intelligence (OSINT) and queries of public information. Afterwards you move on to actively engaging the targets discovered which leads into [footprinting and scanning](Footprinting_Scanning).
 - more info the better
 - passive and active types
 	- passive - without active engaging target
@@ -89,7 +89,7 @@
 - Have I been pwned
 	- https://haveibeenpwned.com/Passwords
 ### #Website-Scouring
-##### On site
+##### On web-site
 - robots.txt
 	- text file information for crawlers
 	- disallow and allow sections
