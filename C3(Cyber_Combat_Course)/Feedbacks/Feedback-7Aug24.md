@@ -1,5 +1,4 @@
 # INE
-
 # Assessment Methodologies: Footprinting & Scanning
 - Ping Sweeps
 - Test your knowledge: Ping Sweeps
