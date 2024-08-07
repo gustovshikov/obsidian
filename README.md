@@ -6,7 +6,7 @@ Sections are getting built out and changing as I progress.
 
 # Table of Contents
 1. C3 (Cyber Combat Course)
-	1. [Overview](C3(Cyber_Combat_Course)/C3_Overview)
+	1. [Overview](C3(Cyber_Combat_Course)/C3_Overview.md)
 2. INE EJPT
 	1. Assessment Methodologies
 		1. [Information Gathering](INE_EJPTv2/Information_Gathering)
