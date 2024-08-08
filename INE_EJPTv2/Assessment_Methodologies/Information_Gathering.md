@@ -6,7 +6,7 @@
 	2. [Web Scouring](#Website-Scouring)
 
 ## #Overview
-First stage of penetration test. Gather passive knowledge of targets through open source intelligence (OSINT) and queries of public information. Afterwards you move on to actively engaging the targets discovered which leads into [footprinting and scanning](Footprinting_Scanning).
+First stage of penetration test. Gather passive knowledge of targets through open source intelligence (OSINT) and queries of public information. Afterwards you move on to actively engaging the targets discovered which leads into [footprinting and scanning](Footprinting_Scanning.md).
 - more info the better
 - passive and active types
 	- passive - without active engaging target

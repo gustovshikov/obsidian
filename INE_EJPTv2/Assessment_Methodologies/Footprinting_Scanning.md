@@ -6,7 +6,7 @@
 	2. [TCP Three way handshake](#TCP_Three_way_handshake)
 
 # #Overview
-After gaining initial access and [Information Gathering](Information_Gathering) you need to gather more in depth information. This involved building a network map and versions of services that are running on devices as well as operating systems. This is valuable to know as the next step [(Enumeration)](Enumeration) will build upon this information to discover vulnerabilities to exploit.
+After gaining initial access and [Information Gathering](Information_Gathering.md) you need to gather more in depth information. This involved building a network map and versions of services that are running on devices as well as operating systems. This is valuable to know as the next step [(Enumeration)](Enumeration.md) will build upon this information to discover vulnerabilities to exploit.
 - network mapping
 - host discovery
 - port scanning

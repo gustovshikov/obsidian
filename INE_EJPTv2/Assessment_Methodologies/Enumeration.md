@@ -5,7 +5,7 @@ Table of contents
 ---
 # Overview
 
-After [Footpringing and Scanning](Footprinting_Scanning) we need to find out specific information on port and services that are running. We want to look at these and enumerate what they do, if they require logins, and what versions of said services are running.
+After [Footpringing and Scanning](Footprinting_Scanning.md) we need to find out specific information on port and services that are running. We want to look at these and enumerate what they do, if they require logins, and what versions of said services are running.
 
 ---
 # Servers and Services
@@ -15,7 +15,7 @@ A computer that serves something. Shares information by having open connections 
 The specific applications that are running on a server in order to provide a service. An 
 
 # Services
-1. [SMB](../../Services/SMB)
+1. [SMB](../../Services/SMB.md)
 2. FTP
 3. SSH
 4. HTTP
