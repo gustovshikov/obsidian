@@ -13,7 +13,7 @@ First stage of penetration test. Gather passive knowledge of targets through ope
 		- through OSINT and online resources
 		- IP adresses & DNS information
 		- domain names & subdomains
-		- email adresses
+		- email adresses 
 		- web technologies used
 	- active - engaging target directly
 		- scanning targets

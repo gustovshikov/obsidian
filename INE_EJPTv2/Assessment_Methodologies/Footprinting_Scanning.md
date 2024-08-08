@@ -12,7 +12,7 @@ After gaining initial access and [Information Gathering](Information_Gathering) 
 - port scanning
 - fingerprinting hosts
 - firewall detection and evasion
-- saving output from scans!
+- saving output from scans! 
 
 # #Tools
 - [nmap](../../Tools/NMAP.md) **<- Go Here**
