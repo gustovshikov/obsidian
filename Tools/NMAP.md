@@ -3,10 +3,10 @@
 # Table of Contents
 1. [Examples](#Examples)
 2. [Options](#Options)
-	1. Host discovery
-	2. Port enumeration
-	3. Service and OS Enumeration
-	4. Additional options
+	1. [Host Discovery](#Host_Discovery)
+	2. [Port Enumeration](#Port_Enumeration)
+	3. [Service_and_OS_Enumeration](#Service_and_OS_Enumeration)
+	4. [Additional_Options](#Additional_Options)
 		3. Timing
 		4. Output
 3. [Arguments](#Arguments)
@@ -22,14 +22,14 @@
 - nmap -Pn -PS -v 192.168.8.3
 - nmap -Pn -sS -F 10.10.23.4
 # #Options
-### Host discovery
+### Host_discovery
 - -sn : no port scan, ping sweep host discovery
 	- when scanning directly connected network it will use ARP
 		- --send-ip will override
 	- -PS : TCP SYN Ping scan, respond with RST
 	- -PA : use ACK 
 	- -PE : ICMP echo
-### Port enumeration
+### Port_enumeration
 - Default scan without options 
 	- does host discovery 
 	- SYN scan -sS
@@ -40,18 +40,18 @@
 	- can be used to check if "unfiltered" for Firewalls
 - -sA : ACK scan
 - -sT : TCP connect scan : send final ACK
-- -sU : UDP port scan
+- -sU : UDP port scan : --top-port 25
 - -p- : to scan all ports or 
 	- -p1-1000 : first 1000
 	- -p80,445,3389
-### Service and OS Enumeration
+### Service_and_OS_Enumeration
 - -sV : service version detection
 	- --version-intensity : 0-9 higher is more accurate
 - -O : OS detection
 	- --osscan-guess : aggressive guessing with percentages
 - -sC : default scripts
 - -A : combines -sV -O -sC and traceroute
-### Additional options
+### Additional_Options
 - -v : verbose
 ##### Timing
 - -T0 : Timing Templates
@@ -94,6 +94,7 @@ Feature that allows you to write automation scripts. Nmap comes with a collectio
 - 636 : LDAP over TLS : TCP/UDP
 - 3389 : RDP : TCP/UDP
 - 137-139 : NetBios : TCP/UDP
+- 445 : SMB
 ### Common Ports
 - 22 : SSH
 - 23 : telnet
@@ -102,6 +103,7 @@ Feature that allows you to write automation scripts. Nmap comes with a collectio
 - 69 : TFTP
 - 80 : HTTP
 - 110/995 : POP3
+- 161 : SNMP
 - 143/993 : IMAP4
 - 443 : HTTPS
 ### Database

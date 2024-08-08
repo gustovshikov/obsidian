@@ -142,7 +142,55 @@ Fridays are full remote
 - Windows Recon: Zenmap
 - Scan the Server 2
 - Scan the Server 3
-
+### Assessment Methodologies: Enumeration
+- Introduction - Course Introduction
+##### Course Overview
+- Overview
+- Servers & Services
+- Test your knowledge: Servers & Services
+##### SMB Lesson
+- SMB: Windows Discover & Mount
+- Windows Recon: SMB Discover and Mount
+- SMB: Nmap Scripts
+- Windows Recon: SMB Nmap Scripts
+- SMB: SMBMap
+- Windows Recon: SMBMap
+- SMB: Samba
+- Samba Recon: Basics 
+- SMB: Samba 29m 40s
+- Samba Recon: Basics II 
+- SMB: Samba 38m 31s
+- Samba Recon: Basics III 
+- SMB Dictionary Attack
+- Samba Recon: Dictionary Attack
+##### FTP Lesson
+- FTP8m 2s
+- ProFTP Recon: Basics
+- FTP Anonymous Login
+- VSFTPD Recon: Basics 
+##### SSH Lesson
+- SSH
+- SSH Recon: Basic 
+- SSH Dictionary Attack
+- SSH Recon: Dictionary Attack
+##### HTTP Lesson
+- HTTP IIS
+- Windows Recon: IIS 
+- HTTP IIS Nmap Scripts
+- Windows Recon: IIS: Nmap Scripts 
+- HTTP Apache
+- Apache Recon: Basics 
+##### SQL Lesson
+- MySQL
+- MySQL Recon: Basics 
+- MySQL Dictionary Attack
+- MySQL Recon: Dictionary Attack 
+- MSSQL Nmap Scripts
+- Recon: MSSQL: Nmap Scripts
+- MSSQL Metasploit
+- Recon: MSSQL: Metasploit
+##### Goodbye
+- Conclusion - Course Conclusion
 
 ### TryHackMe 
 
