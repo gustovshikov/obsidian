@@ -9,9 +9,9 @@ Sections are getting built out and changing as I progress.
 	1. [Overview](C3(Cyber_Combat_Course)/C3_Overview.md)
 2. INE EJPT
 	1. Assessment Methodologies
-		1. [Information Gathering](/INE_EJPTv2/Assessment_Methodologies/Information_Gathering)
+		1. [Information Gathering](/INE_EJPTv2/Assessment_Methodologies/Information_Gathering.md)
 		2. [Footprinting & Scanning](/INE_EJPTv2/Assessment_Methodologies/Footprinting_Scanning.md)
-		3. [Enumeration](/INE_EJPTv2/Assessment_Methodologies/Enumeration)
+		3. [Enumeration](/INE_EJPTv2/Assessment_Methodologies/Enumeration.md)
 		4. Vulnerability Assessment
 	2. Host & Network Auditing
 		1. Auditing Fundamentals

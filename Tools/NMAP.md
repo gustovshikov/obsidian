@@ -78,6 +78,8 @@ Feature that allows you to write automation scripts. Nmap comes with a collectio
 	- based on open ports found
 	- --script-help=mongodb-databases : information on script
 	- --script=mongodb-info : run specific script, category, directory
+## Service Specific
+1. [SMB information](../Services/SMB#NMAP)
 # Firewall_Avoidance
 - -sA : ACK scan : can see if unfiltered vs SYN scan
 - --ttl : set time-to-live

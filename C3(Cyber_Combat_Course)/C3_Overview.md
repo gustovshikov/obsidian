@@ -12,6 +12,10 @@
 			5. Windows Fundamentals
 	3. [Red Phase](#Red_Phase)
 		1. INE EJPT
+			1. Assessment Methodologies
+			2. Host & Network Auditing
+			3. Host & Network Penetration Testing
+			4. Web Application Penetration Testing
 		2. TryHackMe
 			1. Junior Penetration Tester Path
 		3. Youtube Playlist
@@ -142,7 +146,7 @@ Fridays are full remote
 - Windows Recon: Zenmap
 - Scan the Server 2
 - Scan the Server 3
-### [Assessment Methodologies: Enumeration](../INE_EJPTv2/Assessment_Methodologies/Enumeration)
+### [Assessment Methodologies: Enumeration](../INE_EJPTv2/Assessment_Methodologies/Enumeration.md)
 - Introduction - Course Introduction
 ##### Course Overview
 - Overview
