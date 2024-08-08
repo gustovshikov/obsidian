@@ -111,5 +111,5 @@ Feature that allows you to write automation scripts. Nmap comes with a collectio
 - 5432 : PostgreSQL
 
 # #Index
-- [Information Gathering](../INE_EJPTv2/Information_Gathering.md#Tools)
-- [Footprinting Scanning](../INE_EJPTv2/Footprinting_Scanning.md#Tools)
+- [Information Gathering](../INE_EJPTv2/Assessment_Methodologies/Information_Gathering.md#Tools)
+- [Footprinting Scanning](../INE_EJPTv2/Assessment_Methodologies/Footprinting_Scanning.md#Tools)

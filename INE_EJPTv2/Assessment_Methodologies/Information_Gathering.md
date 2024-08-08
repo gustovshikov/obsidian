@@ -67,7 +67,7 @@ First stage of penetration test. Gather passive knowledge of targets through ope
 	- zonetransfer
 	- quick lightweight
 	- great before nmap
-- [nmap](../Tools/NMAP.md) 
+- [nmap](../../Tools/NMAP.md) 
 ##### Applications
 - HTTrack
 	- can be blocked by site

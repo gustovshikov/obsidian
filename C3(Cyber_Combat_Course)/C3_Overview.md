@@ -69,7 +69,7 @@ Fridays are full remote
 
 ## #Red_Phase
 ### INE
-### [Assessment Methodologies: Information Gathering](../INE_EJPTv2/Information_Gathering.md)
+### [Assessment Methodologies: Information Gathering](../INE_EJPTv2/Assessment_Methodologies/Information_Gathering.md)
 -  Introduction - Course Introduction
 -  Introduction To Information Gathering
 -  Test your knowledge: Introduction To Information Gathering
@@ -98,7 +98,7 @@ Fridays are full remote
 - Windows Recon: Nmap Host Discovery Cyber Security
 - Conclusion - Course Conclusion
 
-### [Assessment Methodologies: Footprinting & Scanning](../INE_EJPTv2/Footprinting_Scanning.md)
+### [Assessment Methodologies: Footprinting & Scanning](../INE_EJPTv2/Assessment_Methodologies/Footprinting_Scanning.md)
 - Introduction - Course Introduction
 - Active Information Gathering
 - Test your knowledge: Active Information Gathering
@@ -142,7 +142,7 @@ Fridays are full remote
 - Windows Recon: Zenmap
 - Scan the Server 2
 - Scan the Server 3
-### Assessment Methodologies: Enumeration
+### [Assessment Methodologies: Enumeration](../INE_EJPTv2/Assessment_Methodologies/Enumeration)
 - Introduction - Course Introduction
 ##### Course Overview
 - Overview
