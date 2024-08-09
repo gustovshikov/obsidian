@@ -76,7 +76,8 @@ Fridays are full remote
 ---
 ## #Red_Phase
 ### INE_EJPT
-### [Assessment Methodologies: Information Gathering](../INE_EJPTv2/Assessment_Methodologies/Information_Gathering.md)
+### Assessment Methodologies
+#### [Information Gathering](../INE_EJPTv2/Assessment_Methodologies/Information_Gathering.md)
 -  Introduction - Course Introduction
 -  Introduction To Information Gathering
 -  Test your knowledge: Introduction To Information Gathering
@@ -106,7 +107,7 @@ Fridays are full remote
 - Conclusion - Course Conclusion
 
 ---
-### [Assessment Methodologies: Footprinting & Scanning](../INE_EJPTv2/Assessment_Methodologies/Footprinting_Scanning.md)
+#### [Footprinting & Scanning](../INE_EJPTv2/Assessment_Methodologies/Footprinting_Scanning.md)
 - Introduction - Course Introduction
 - Active Information Gathering
 - Test your knowledge: Active Information Gathering
@@ -150,7 +151,9 @@ Fridays are full remote
 - Windows Recon: Zenmap
 - Scan the Server 2
 - Scan the Server 3
-### [Assessment Methodologies: Enumeration](../INE_EJPTv2/Assessment_Methodologies/Enumeration.md)
+
+---
+#### [Enumeration](../INE_EJPTv2/Assessment_Methodologies/Enumeration.md)
 - Introduction - Course Introduction
 ##### Course Overview
 - Overview
@@ -199,6 +202,29 @@ Fridays are full remote
 - Recon: MSSQL: Metasploit
 ##### Goodbye
 - Conclusion - Course Conclusion
+
+---
+#### Vulnerability Assessment
+- Introduction - Course Introduction
+#####  Auditing Fundamentals
+- 
+
+---
+### Host & Network Auditing 
+#### Auditing Fundamentals
+
+---
+### Host & Network Penetration Testing
+#### System/Host based Attacks
+#### Network Based Attacks
+#### The Metasploit Framework
+#### Exploitation
+#### Post-Exploitation
+#### Social Engineering
+
+---
+### Web Application Penetration Testing
+#### Introduction to the Web and HTTP
 
 ---
 ### TryHackMe 
