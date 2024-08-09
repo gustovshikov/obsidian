@@ -1,4 +1,4 @@
-# Table of Contecnts
+# Table of Contents
 1. [Overview](#Overview)
 	1. Ports
 	3. Usage

@@ -1,6 +1,7 @@
 Table of contents
 1. Overview
-2. Servers and Services 
+2. Servers and Services
+3. Service Specifics
 
 ---
 # Overview
@@ -12,11 +13,12 @@ After [Footpringing and Scanning](Footprinting_Scanning.md) we need to find out 
 ### Servers
 A computer that serves something. Shares information by having open connections which can be exploited.
 ### Services
-The specific applications that are running on a server in order to provide a service. An 
+The specific applications that are running on a server in order to provide a service. 
 
-# Services
+---
+# Services Specifics
 1. [SMB](../../Services/SMB.md)
 2. [FTP](../../Services/FTP.md)
-3. SSH
-4. HTTP
-5. SQL
+3. [SSH](../../Services/SSH.md)
+4. [HTTP](../../Services/HTTP.md)
+5. [SQL](../../Services/SQL.md)
