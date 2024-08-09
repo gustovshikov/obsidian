@@ -16,7 +16,7 @@ The specific applications that are running on a server in order to provide a ser
 
 # Services
 1. [SMB](../../Services/SMB.md)
-2. FTP
+2. [FTP](../../Services/FTP.md)
 3. SSH
 4. HTTP
 5. SQL
