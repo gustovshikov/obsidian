@@ -13,11 +13,11 @@ Sections are getting built out and changing as I progress.
 		1. [Information Gathering](/INE_EJPTv2/Assessment_Methodologies/Information_Gathering.md)
 		2. [Footprinting & Scanning](/INE_EJPTv2/Assessment_Methodologies/Footprinting_Scanning.md)
 		3. [Enumeration](/INE_EJPTv2/Assessment_Methodologies/Enumeration.md)
-		4. Vulnerability Assessment
+		4. [Vulnerability Assessment](/INE_EJPTv2/Assessment_Methodologies/Vulnerability_Assessment.md)
 	2. Host & Network Auditing
 		1. Auditing Fundamentals
 	3. Host & Network Penetration Testing
-		1. System/Host Based Attacks
+		1. [System/Host Based Attacks](/INE_EJPTv2/Host_Network_Penetration_Testing/System_Host_Based_Attacks.md)
 		2. Network-Based Attacks
 		3. The Metasploit Framework
 		4. Exploitation
