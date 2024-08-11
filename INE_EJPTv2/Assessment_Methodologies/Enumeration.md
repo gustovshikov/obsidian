@@ -6,7 +6,7 @@ Table of contents
 ---
 # Overview
 
-After [Footpringing and Scanning](Footprinting_Scanning.md) we need to find out specific information on port and services that are running. We want to look at these and enumerate what they do, if they require logins, and what versions of said services are running.
+After [Footpringing and Scanning](Footprinting_Scanning.md) we need to find out specific information on port and services that are running. We want to look at these and enumerate what they do, if they require logins, and what versions of said services are running. Following enumeration is exploitation in [System & Host Based Attacks](../Host_Network_Penetration_Testing/System_Host_Based_Attacks.md).
 
 ---
 # Servers and Services

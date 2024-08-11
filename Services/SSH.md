@@ -11,7 +11,7 @@ SSH - Secure Shell
 
 Used to connect to securely connect to remote machines.
 
-## Ports
+## #Ports
 - 22 : main port
 
 ## Related Services
@@ -21,7 +21,7 @@ Used to connect to securely connect to remote machines.
 `ssh -p 22 user@192.168.4.3`
 
 ---
-# Tools
+# #Tools
 ## netcat
 `nc 192.168.13.3 22` 
 - grabs banner

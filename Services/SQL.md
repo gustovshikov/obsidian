@@ -13,7 +13,7 @@ SQL - Simple Query Language
 Relational database that is used by a lot of websites to store data.
 
 ---
-## Ports
+## #Ports
 - 3306 : mysql
 - 1433 : MSSQL
 
@@ -32,7 +32,7 @@ Relational database that is used by a lot of websites to store data.
 - MSSql : Microsoft SQL
 
 ---
-# Tools
+# #Tools
 
 ## Hydra
 dictionary attack
@@ -70,7 +70,7 @@ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_password.tx
 - use auxiliary/admin/mssql/mssql_enum
 	- run
 - use auxiliary/admin/mssql/mssql_enum_sql_logins
-- use auxiliary/admin/mssql/mssql_enum_exec
+- use auxiliary/admin/mssql/mssql_exec
 	- set cmd whoami
 	- set username sa ???
 - use auxiliary/admin/mssql/mssql_enum_domain_accounts

@@ -10,7 +10,7 @@
 
 Used to host websites. 
 
-## Ports
+## #Ports
 - 80 : HTTP
 - 443 : HTTPS
 - 8080 : Common Alternative or proxy
@@ -25,7 +25,7 @@ Use web-browser to access the site via hostname or IP.
 - httpd : 
 
 ---
-# Tools
+# #Tools
 
 ## whatweb
 grabs information and runs tests
