@@ -12,10 +12,28 @@ Taking advantage of **inherent vulnerabilities** or **misconfigurations** in ord
   
 Host based attacks are against internal machines and not necessarily servers that are running services that are public accessible.
 
+Type of Vulnerabilities
+- Information Disclosure
+- Buffer Overflows
+- Remote Code Execution
+- Privilege Escalation
+- Denial of Service
+
 ---
 # Tools
-## Windows
+## Windows Attacks
+### Services
+
+| Service  | #Ports   | Description                            |
+| -------- | -------- | -------------------------------------- |
+| IIS      | 80/443   | webserver                              |
+| WebDav   | 80/443   | Web Distributed Authoring & Versioning |
+| SMB/CIFS | 445      | Network File sharing                   |
+| RDP      | 3389     | Remote Desktop Protocol                |
+| WinRM    | 5986/443 | Windows Remote Management Protocol     |
+### [IIS WebDav](../../Services/IIS-WebDav.md)
+### [SMB with PsExec](../../Services/SMB.md#PsExec)
 
 
 ---
-## Linux
+## Linux Attacks
