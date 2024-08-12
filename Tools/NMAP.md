@@ -7,8 +7,8 @@
 	2. [Port Enumeration](#Port_Enumeration)
 	3. [Service_and_OS_Enumeration](#Service_and_OS_Enumeration)
 	4. [Additional_Options](#Additional_Options)
-		3. Timing
-		4. Output
+		1. Timing
+		2. Output
 3. [Arguments](#Arguments)
 4. [Nmap Scripting Engine (NSE)](#Nmap_Scripting_Engine_(NSE))
 5. [Firewall avoidance](#Firewall_Avoidance)
@@ -79,7 +79,7 @@ Feature that allows you to write automation scripts. Nmap comes with a collectio
 	- --script-help=mongodb-databases : information on script
 	- --script=mongodb-info : run specific script, category, directory
 ## Service Specific
-1. [SMB information](../Services/SMB#NMAP)
+1. [SMB information](../Services/SMB.md#NMAP)
 # Firewall_Avoidance
 - -sA : ACK scan : can see if unfiltered vs SYN scan
 - --ttl : set time-to-live
