@@ -11,6 +11,9 @@
 	5. rpcclient
 	6. enum4linux
 	7. msfconsole
+	8. hydra
+	9. psexec.py
+	10. eternal blue
 
 ---
 # #Overview 
@@ -190,7 +193,14 @@ Metasploit framework
 ## EternelBlue
 - MS17-010 vulnerability
 - SMBv1 protocol vulnerability
+- AutoBlue-MS17-010 : puthon script on github
+	- --script smb-vuln-ms17-010
+- msfconsole
+	- auxiliary/scanner/smb/smb_ms17_010 : check if vulnerable
+	- exploit/windows/smb/ms17_010_eternalblue : explot
 
 
+---
 # Index
 1. [Enumeration](../INE_EJPTv2/Assessment_methodologies/Enumeration)
+2. [System_Host_Based_Attacks](../INE_EJPTv2/Host_Network_Penetration_Testing/System_Host_Based_Attacks.md)

@@ -22,12 +22,12 @@ First stage of penetration test. Gather passive knowledge of targets through ope
 		- internal infrastructure
 		- technologies/services
 
-# #Resources
+# Resources
 ## Practice Sites
 - zonetransfer.me
 	- can practice dns zone transfers
 
-# #Gathering-Enumeration
+# Gathering-Enumeration
 
 ## website Recon & Footprinting
 
@@ -88,7 +88,7 @@ First stage of penetration test. Gather passive knowledge of targets through ope
 	- limit results to site subdomain site:\*.site.com
 - Have I been pwned
 	- https://haveibeenpwned.com/Passwords
-### #Website-Scouring
+### Website-Scouring
 ##### On web-site
 - robots.txt
 	- text file information for crawlers

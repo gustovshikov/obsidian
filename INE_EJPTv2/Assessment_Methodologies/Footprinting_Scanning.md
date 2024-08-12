@@ -44,6 +44,7 @@ Mostly just use nmap to gather details on Tagets, Services/Versions, and OSs
 	- send TCP ACK and listen for reset if port is open
 - SYN-ACK Ping
 	- send SYN-ACK and listen for reset if port is open
+
 ## TCP_Three_way_handshake
 ### Connection Establishment
 1. **Client ---->> SYN** ----->> Server
