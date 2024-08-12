@@ -31,6 +31,7 @@ Type of Vulnerabilities
 | SMB/CIFS | 445      | Network File sharing                   |
 | RDP      | 3389     | Remote Desktop Protocol                |
 | WinRM    | 5986/443 | Windows Remote Management Protocol     |
+
 ### [IIS WebDav](../../Services/IIS-WebDav.md)
 ### [SMB with PsExec](../../Services/SMB.md#PsExec)
 
