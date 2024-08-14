@@ -55,6 +55,8 @@ uid=1000,gid=1000,credentials=/etc/samba/user.conf    0 0
 - SAMBA
 	- open source version of Microsoft active directory
 
+---
+
 # #Tools
 ## NMAP
 [nmap information](../Tools/NMAP)
@@ -90,12 +92,15 @@ Available in default folder */user/share/nmap/scripts*
 	- can show other users that might have admin access
 - smb-enum-services
 
+---
+
 ## smbmap
 can be used to show contents, upload, and download files from SMB service running on a server with a guest or user account.
 #### Usage
 - If protocol version smbv1 exists you can go with null session attack
 	- `smbmap -u guest -p "" -d . -H 10.4.50.3`
 - Can use a login that you have
+	- -H : target(host)
 	- -d : To show share directory permission
 		- `smbmap -u administrator -p smbserver_777 -d . -H 10.4.32.4`
 	- -x : To run a command (RCE)
@@ -105,8 +110,12 @@ can be used to show contents, upload, and download files from SMB service runnin
 	- --upload '/hack/backdoor' 'C$\\backdoor' : upload file
 	- --download 'C$\\flag.txt' : download file
 
+---
+
 ## nmblookup
 - -A : utilizes netbios to connect
+
+---
 
 ## smbclient
 `smbclient -L 192.168.4.3 -N`
@@ -119,7 +128,9 @@ can be used to show contents, upload, and download files from SMB service runnin
 	- login and can run commands like *ls*
 	- get flag
 - -U : username
+- `? to list help on terminal`
 
+---
 
 ## rpcclient
 can be used to connect to smb
@@ -132,6 +143,8 @@ Once logged in
 - enumdomgroups : graps groups
 - lookupnames admin : gets more info on user
 
+---
+
 ## enum4linux
 - -o : get OS info
 - -U : users information
@@ -139,6 +152,9 @@ Once logged in
 - -G : Groups
 - -i : printers 
 - -r -u "admin" -p "password1" 192.34.54.3 : return users SID
+`enum4linux -a -u admin -p password1 192.168.4.3`
+
+---
 
 ## msfconsole
 Metasploit framework
@@ -179,16 +195,22 @@ Metasploit framework
 		- set LHOST
 		- set LPORT
 
+---
+
 ## Hydra
 `hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.33.3 smb`
 *lower* case to give string and *upper* case to pass in file
 - -l admin : username
 - -P /wordlist.txt : pass in wordlist
 
+---
+
 ## PsExec
 `psexec.py Administrator@10.34.4.3 cmd.exe` try **powershell.exe**
 - Is a lightweight telnet replacement by Microsoft.
 - Authentication is via SMB
+
+---
 
 ## EternelBlue
 - MS17-010 vulnerability

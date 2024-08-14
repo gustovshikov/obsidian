@@ -224,6 +224,7 @@ Conclusion - Course Conclusion
 
 ---
 ### Host & Network Penetration Testing
+#### [System_Host_Based_Attacks](../INE_EJPTv2/Host_Network_Penetration_Testing/System_Host_Based_Attacks)
 - Introduction - Course Introduction
 ##### Host Based Attacks
 - Introduction To System/Host Based Attacks
@@ -308,7 +309,32 @@ Conclusion - Course Conclusion
 ##### Goodbye
 - Conclusion - Course Conclusion
 
+
 ---
+
+#### Network-Based_Attacks
+Introduction - Course Introduction
+##### Network-Based Attacks
+Network-Based Attacks - Part 1
+Test your knowledge: Network-Based Attacks - Part 1
+Network-Based Attacks - Part 2
+Test your knowledge: Network-Based Attacks - Part 2
+##### Labs
+Tshark
+Getting Started: Tshark
+Filtering Basics
+Filtering Basics: HTTP
+Arp Poisoning
+ARP Poisoning
+WiFi Traffic Analysis
+WiFi Security: Traffic Analysis I 
+Filtering WiFi9m 41s
+Filtering Advanced: WiFi 
+##### Goodbye
+Conclusion - Course Conclusion
+
+---
+
 ### Web Application Penetration Testing
 #### Introduction to the Web and HTTP
 
