@@ -48,3 +48,18 @@ The meterpreter (meta-interpreter) payload is an advanced multi-functional paylo
 
 ---
 
+The Penetration Testing Execution Standard (PTES)
+http://www.pentest-standard.org/index.php/Main_Page
+
+| Penetration Testing Phase           | Metasploit Framework Implementation    |
+| ----------------------------------- | -------------------------------------- |
+| Information Gathering & Enumeration | Auxiliary Modules                      |
+| Vulnerability Scanning              | Auxiliary Modules, Nessus              |
+| Exploitation                        | Exploit Modules & Payloads             |
+| Post Exploitation                   | Meterpreter                            |
+| Privilege Escalation                | Post Exploitation Modules, Meterpreter |
+| Maintaining Persistent Access       | Post Exploitation Modules, Persistence |
+
+---
+
+

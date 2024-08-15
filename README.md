@@ -19,7 +19,7 @@ Sections are getting built out and changing as I progress.
 	3. Host & Network Penetration Testing
 		1. [System/Host Based Attacks](/INE_EJPTv2/Host_Network_Penetration_Testing/System_Host_Based_Attacks.md)
 		2. [Network-Based Attacks](/INE_EJPTv2/Host_Network_Penetration_Testing/Network_Based_Attacks.md)
-		3. The Metasploit Framework
+		3. [The Metasploit Framework](/INE_EJPTv2/Host_Network_Penetration_Testing/The_Metasploit_Framework.md)
 		4. Exploitation
 		5. Post-Exploitation
 		6. Social Engineering
@@ -36,7 +36,8 @@ Sections are getting built out and changing as I progress.
 	8. [WinRM](Services/WinRM.md)
 4. Tools
 	1. [NMAP](Tools/NMAP.md)
-	2. [Bash](Tools/BASH.md)
+	2. [MSF](Tools/MSF.md)
+	3. [Bash](Tools/BASH.md)
 
 ---
 
