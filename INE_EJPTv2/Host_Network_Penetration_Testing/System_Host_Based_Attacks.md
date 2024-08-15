@@ -282,6 +282,7 @@ Two binaries exist in home folder. one calls the other binary with SUID set for 
 | $2    | Blowfish         |
 | $5    | SHA-256          |
 | $6    | SHA-512          |
+
 **LAB Example**
 1. Use msfconsole to exploit proftpd with the 133c backdoor. 
 2. Get a cmd shell session by default then run /bin/bash -i to upgrade to rot bash. 

@@ -18,7 +18,7 @@ Sections are getting built out and changing as I progress.
 		1. Auditing Fundamentals
 	3. Host & Network Penetration Testing
 		1. [System/Host Based Attacks](/INE_EJPTv2/Host_Network_Penetration_Testing/System_Host_Based_Attacks.md)
-		2. Network-Based Attacks
+		2. [Network-Based Attacks](/INE_EJPTv2/Host_Network_Penetration_Testing/Network_Based_Attacks.md)
 		3. The Metasploit Framework
 		4. Exploitation
 		5. Post-Exploitation
@@ -31,7 +31,9 @@ Sections are getting built out and changing as I progress.
 	3. [HTTP](Services/HTTP.md)
 	4. [SQL](Services/SQL.md)
 	5. [SSH](Services/SSH.md)
-	6. [IIS-WebDav](Services/IIS-WebDav.md)
+	6. [RDP](Services/RDP.md)
+	7. [IIS-WebDav](Services/IIS-WebDav.md)
+	8. [WinRM](Services/WinRM.md)
 4. Tools
 	1. [NMAP](Tools/NMAP.md)
 	2. [Bash](Tools/BASH.md)
@@ -62,3 +64,4 @@ Sections are getting built out and changing as I progress.
 5. TryHackMe
 	1. SOC Level 1
 	2. Cyber Defense
+
