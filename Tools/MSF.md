@@ -37,18 +37,19 @@ The meterpreter (meta-interpreter) payload is an advanced multi-functional paylo
 - MSF Base
 
 ## Diagram
-
-**Tools** --------> **Rex**
-				/\\
-			**MSF Core**
-			    /\\
-**Plugins** ---> **MSF Base** <------- **Interfaces**
-			    /\\
-			**Modules**
+```
+Tools --------> Rex
+				/\
+			MSF Core
+			    /\
+Plugins ---> MSF Base <------- Interfaces
+			    /\
+			Modules
+```
 
 ---
 
-The Penetration Testing Execution Standard (PTES)
+## The Penetration Testing Execution Standard (PTES)
 http://www.pentest-standard.org/index.php/Main_Page
 
 | Penetration Testing Phase           | Metasploit Framework Implementation    |
