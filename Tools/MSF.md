@@ -39,12 +39,12 @@ The meterpreter (meta-interpreter) payload is an advanced multi-functional paylo
 ## Diagram
 ```
  Tools --------> Rex
-				/\
-			  MSF Core
-				/\
+                 /\
+              MSF Core
+                 /\
  Plugins ---> MSF Base <------- Interfaces
-				/\
-			  Modules
+                 /\
+              Modules
 ```
 
 
