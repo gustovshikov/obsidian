@@ -1,4 +1,23 @@
 Metasploit Framework
+# Table of Contents
+1. [Overview](#Overview)
+2. [Architecture](#Architecture)
+	1. Interfaces
+	2. Modules
+		1. Meterpreter Payload
+	3. Libraries
+	4. Diagram
+	5. The Penetration Testing Execution Standard (PTES)
+3. [Usage](#Usage)
+	1. nmap importing or running scan
+	2. Auxiliary Modules
+	3. Workflow Examples
+		1. FTP
+		2. SMB
+
+
+---
+
 # Overview
 
 - Interface : Methods of interacting with the MSF
@@ -85,8 +104,38 @@ http://www.pentest-standard.org/index.php/Main_Page
 - once run, the portscan will be routed through the first machine
 - auxiliary/scanner/discovery/udp_sweep : another module to do UDP port sweep
 
+---
+
+## Workflow Examples
+
 ### FTP
-- `search type:auxiliary name:ftp` : find scanner for ftp version
-- use module on target to get service version
-- `search type:auxiliary name:ftp` : ftp_login for brute forcing
-- set user file and pass file
+1. `search type:auxiliary name:ftp` : find scanner for ftp version
+	1. use module on target to get service version
+2. `search type:auxiliary name:ftp` : ftp_login for brute forcing
+	1. set user file and pass file
+
+### SMB
+1. `search type:auxiliary name:smb` : smb_version scanner
+	1. use to enumerate smb on target
+2. `search type:auxiliary name:smb` : smb_enumusers
+	1. `info` give information on the module
+3. `search type:auxiliary name:smb` : smb_enumshares
+4. smb_login : brute force login
+	1. can set user to admin discovered and then try passfile
+5. use [smbclient](../Services/SMB.md#smbclient) to login
+
+### WebServer
+1. `search type:auxiliary name:http` : http_version
+	1. use to find the service version
+2. `search type:auxiliary name:http` : http_header
+	1. grabs methods and header information
+3. `search type:auxiliary name:http` : robots_txt
+	1. finds information for the robots file
+	2. `curl` a dir to check it out
+4. dir_scanner : find directories
+	1. `set DICTIONARY` 
+	2. `set PATH` 
+5. files_dir : find files in directories
+6. `search type:auxiliary name:http_login` : brute force login
+	1. `set AUTH_URI` : target dir
+	2. might need to unset userpass_file if providing seperately

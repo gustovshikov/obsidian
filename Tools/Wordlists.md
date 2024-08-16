@@ -9,5 +9,5 @@
 
 ## Kali Built-in
 
-`gunzip rockyou.txt.gz` : gunzip first
+`gunzip rockyou.txt.gz` 
 /usr/share/wordlist/rockyou.txt

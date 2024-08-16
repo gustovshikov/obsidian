@@ -78,16 +78,16 @@ nmap -p80 --script http-enum,http-headers,http-methods,http-webdav-scan --script
 Metasploit Framework Console
 
 - use auxiliary/scanner/http/http_version
-	- set rhosts 192.15.43.3
-	- options
-	- run
+	- `set rhosts 192.15.43.3`
+	- `options`
+	- `run`
 - use auxiliary/scanner/http/brute_dirs
-	- set rhosts 192.165.2.3
-	- option
-	- run
+	- `set rhosts 192.165.2.3`
+	- `options`
+	- `run`
 - use auxiliary/scanner/http/robots_txt
-	- set rhosts 192.168.32.3
-	- run
+	- `set rhosts 192.168.32.3`
+	- `run`
 - 
 
 

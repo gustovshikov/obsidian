@@ -15,12 +15,17 @@
 6. [Ports](#Ports)
 7. [Index](#Index)
 
+---
+
 # Usage: nmap \[Scan Type(s)\] \[Options\] {target specification}
 # #Examples
-- nmap -sn -v 192.168.2.24
-- nmap -sn -v -PS21,22,25,80,445,3389,8080 10.4.20.132
-- nmap -Pn -PS -v 192.168.8.3
-- nmap -Pn -sS -F 10.10.23.4
+- `nmap -sn -v 192.168.2.24`
+- `nmap -sn -v -PS21,22,25,80,445,3389,8080 10.4.20.132`
+- `nmap -Pn -PS -v 192.168.8.3`
+- `nmap -Pn -sS -F 10.10.23.4`
+
+---
+
 # #Options
 ### Host_discovery
 - -sn : no port scan, ping sweep host discovery
@@ -64,6 +69,9 @@
 - -oS : script kiddie
 - -oG : grepable format
 - -oA : normal, XML, and grepable files
+
+---
+
 # #Arguments
 ### Targets
 - can specify multiple IPs as multiple arguments
@@ -88,7 +96,10 @@ Feature that allows you to write automation scripts. Nmap comes with a collectio
 - -f : fragment packets
 	- --mtu : set MTU for packets
 - -D : spoof SRC address such as gateway : only works on same network
-- nmap -Pn -sV -p445,3389 -f --data-length 200 -D 10.10.23.1,10.10.23.2 10.4.27.83
+- `nmap -Pn -sV -p445,3389 -f --data-length 200 -D 10.10.23.1,10.10.23.2 10.4.27.83`
+
+---
+
 # #Ports
 ### Windows Ports
 - 88 : kerberos : TCP/UDP
