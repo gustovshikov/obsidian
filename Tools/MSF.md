@@ -12,12 +12,13 @@ Metasploit Framework
 	1. nmap importing or running scan
 	2. Auxiliary Modules
 	3. [Workflow Examples](#Workflow_Examples)
-		1. FTP
-		2. SMB
-		3. MYSQL
-		4. SSH
-		5. SMTP
-	4. Show information gathered
+		1. [FTP](#FTP)
+		2. [SMB](#SMB)
+		3. [MYSQL](#MYSQL)
+		4. [SSH](#SSH)
+		5. [SMTP](#SMTP)
+	4. Vulnerability Scanning
+	5. Show information gathered
 
 
 ---
@@ -95,6 +96,7 @@ http://www.pentest-standard.org/index.php/Main_Page
 - `hosts` : show hosts
 - `services` : show services detected on the hosts
 - `db_nmap -Pn -sV -O` : run and import an nmap scan 
+- You can import from a nessus scan ScanFile.nessus
 
 ## Auxiliary Modules
 - `search portscan` : bring up scanner modules
@@ -183,6 +185,37 @@ http://www.pentest-standard.org/index.php/Main_Page
 	1. performs user enumeration
 
 
+
+---
+
+## Vulnerability_Scanning
+
+Finding vulnerabilities that can be exploited
+1. scan target to find services and versions
+	1. nmap or MSF module
+2. search for services
+	1. `serach smb` : isnide MSF
+	2. `searchsploit "windows smb" | grep -ei "metasploit"`
+	3. can find scanner to check for specific exploit vulnerability
+3. `analyze` : will analyze based on data in DB
+	1. `vulns` : will list out detected vulnerabilities
+4. autopwn plugin
+	1. GitHub hahwul/metasploit-autopwn
+	2. `load db_autopwn`
+	3. `db_autopwn -p -t`
+5. Can use Nessus and then import results from Nessus export
+6. `search cve:2017 name:smb`
+
+### WMAP
+1. `load wmap` : load the wmap module
+2. `wmap_` : use tab complete to see all options
+3. `wmap_sites -a targetIP` : add a target to sites
+4. `wmap_targets -h` : view options
+5. `wmap_run -h` : view options
+6. `wmap_run -t` : show modules that will run
+7. `wmap_run -e` : start testing
+
+
 ---
 
 ## Show information gathered
@@ -191,3 +224,5 @@ Depends on workspace and modules ran within
 - `services`
 - `loot` : shows stuff like schema gathered
 - `creds` : shows credentials
+- `vulns -p 445` : can show discovered vulnerabilities and filter by port
+- `search cve:2017 name:smb` : search for cve year and name

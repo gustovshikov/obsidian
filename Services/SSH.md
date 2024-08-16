@@ -72,6 +72,12 @@ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt \
 	- set verbose true
 	- run
 
+##ssh2john
+1. `ssh2john > hash`
+2. `john -w wordlist/rockyou.txt hash`
+
+---
+
 ### Userful Modules
 - auxiliary/scanner/ssh/ssh_version
 - auxiliary/scanner/ssh/ssh_login
