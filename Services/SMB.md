@@ -58,7 +58,7 @@ uid=1000,gid=1000,credentials=/etc/samba/user.conf    0 0
 ---
 
 # #Tools
-## NMAP
+## #NMAP
 [nmap information](../Tools/NMAP)
 ### Scripts
 Available in default folder */user/share/nmap/scripts*
@@ -156,7 +156,7 @@ Once logged in
 
 ---
 
-## msfconsole
+## #msfconsole
 Metasploit framework
 ### SMB
 - **use auxiliary/scanner/smb/smb_version**
@@ -197,7 +197,7 @@ Metasploit framework
 
 ---
 
-## Hydra
+## #Hydra
 `hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.33.3 smb`
 *lower* case to give string and *upper* case to pass in file
 - -l admin : username

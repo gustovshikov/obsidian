@@ -30,12 +30,12 @@ Potentially allow attackers to remotely execute arbitrary code. Takes advantage 
 ---
 # Tools
 
-## msfconsole
+## #msfconsole
 - **use auxiliary/scanner/rdp/rdp_scanner**
 	- set rport 3333
 	- set rhosts 10.2.24.84
 
-## hydra
+## #hydra
 Brute force logins with dictionary
 ```bash
 hydra -L /us/share/metasploit-framework/data/wordlists/common_users.txt \

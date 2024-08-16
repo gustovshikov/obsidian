@@ -67,7 +67,7 @@ grabs files from url
 
 ---
 
-## nmap
+## #nmap
 
 ```bash
 nmap -p80 --script http-enum,http-headers,http-methods,http-webdav-scan --script-args url-path=/ 10.3.24.160
@@ -87,7 +87,7 @@ nmap -p80 --script http-enum,http-headers,http-methods,http-webdav-scan --script
 
 ---
 
-## msfconsole
+## #msfconsole
 ### Metasploit Framework Console
 - use auxiliary/scanner/http/http_version
 	- `set rhosts 192.15.43.3`

@@ -34,10 +34,13 @@ Sections are getting built out and changing as I progress.
 	6. [RDP](Services/RDP.md)
 	7. [IIS-WebDav](Services/IIS-WebDav.md)
 	8. [WinRM](Services/WinRM.md)
+	9. [SMTP](Services/SMTP.md)
 4. Tools
 	1. [NMAP](Tools/NMAP.md)
 	2. [MSF](Tools/MSF.md)
-	3. [Bash](Tools/BASH.md)
+	3. [Hydra](Tools/Hydra.md)
+	4. [Wordlists](Tools/Wordlists.md)
+	5. [Bash](Tools/BASH.md)
 
 ---
 
