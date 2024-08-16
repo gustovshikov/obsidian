@@ -64,4 +64,29 @@ http://www.pentest-standard.org/index.php/Main_Page
 
 ---
 
+# Usage
 
+## nmap importing or running scan
+- `workspace -a Test` : add a new workspace
+- `db_import /root/winserver.xml` : import an nmap scan
+- `hosts` : show hosts
+- `services` : show services detected on the hosts
+- `db_nmap -Pn -sV -O` : run and import an nmap scan 
+
+## Auxiliary Modules
+- `search portscan` : bring up scanner modules
+- `use auxiliary/scanner/portscan/tcp`
+- `show options` : check the options
+- `set rhosts` : set target
+- get access to target 1 and once you have a meterpreter session spawn a shell and `/bin/bash -i` to get bash and then run ifconfig to grab the information of the second network. exit shell
+- `run autoroute -s 192.113.124.2` : in meterpreter add route to the network
+- drop to background
+- load portscan and set rhosts to the 2nd system
+- once run, the portscan will be routed through the first machine
+- auxiliary/scanner/discovery/udp_sweep : another module to do UDP port sweep
+
+### FTP
+- `search type:auxiliary name:ftp` : find scanner for ftp version
+- use module on target to get service version
+- `search type:auxiliary name:ftp` : ftp_login for brute forcing
+- set user file and pass file

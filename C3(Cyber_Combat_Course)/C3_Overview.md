@@ -33,7 +33,6 @@
 # #General_Information
 
 ## Hours
-Fridays are full remote
 - In-class
 	- 0800 - 1200
 - Lunch
@@ -309,32 +308,186 @@ Conclusion - Course Conclusion
 ##### Goodbye
 - Conclusion - Course Conclusion
 
-
 ---
-
 #### Network-Based_Attacks
-Introduction - Course Introduction
+- Introduction - Course Introduction
 ##### Network-Based Attacks
-Network-Based Attacks - Part 1
-Test your knowledge: Network-Based Attacks - Part 1
-Network-Based Attacks - Part 2
-Test your knowledge: Network-Based Attacks - Part 2
+- Network-Based Attacks - Part 1
+- Test your knowledge: Network-Based Attacks - Part 1
+- Network-Based Attacks - Part 2
+- Test your knowledge: Network-Based Attacks - Part 2
 ##### Labs
-Tshark
-Getting Started: Tshark
-Filtering Basics
-Filtering Basics: HTTP
-Arp Poisoning
-ARP Poisoning
-WiFi Traffic Analysis
-WiFi Security: Traffic Analysis I 
-Filtering WiFi9m 41s
-Filtering Advanced: WiFi 
+- Tshark
+- Getting Started: Tshark
+- Filtering Basics
+- Filtering Basics: HTTP
+- Arp Poisoning
+- ARP Poisoning
+- WiFi Traffic Analysis
+- WiFi Security: Traffic Analysis I 
+- Filtering WiFi9m 41s
+- Filtering Advanced: WiFi 
 ##### Goodbye
-Conclusion - Course Conclusion
+- Conclusion - Course Conclusion
 
 ---
 
+#### The Metasploit Framework (MSF)
+- Introduction - Course Introduction
+##### Metasploit Framework Overview
+- Introduction to the Metasploit Framework
+- Test your knowledge: Introduction to the Metasploit Framework
+- Metasploit Framework Architecture
+- Test your knowledge: Metasploit Framework Architecture
+- Penetration Testing With The Metasploit Framework
+- Test your knowledge: Penetration Testing With The Metasploit Framework
+##### Metasploit Fundamentals
+- Installing & Configuring The Metasploit Framework
+- Test your knowledge: Installing & Configuring The Metasploit Framework
+- MSFconsole Fundamentals
+- Test your knowledge: MSFconsole Fundamentals
+- Creating & Managing Workspaces
+- Test your knowledge: Creating & Managing Workspaces
+##### Nmap
+- Port Scanning & Enumeration With Nmap
+- Test your knowledge: Port Scanning & Enumeration With Nmap
+- Windows Recon: Nmap Host Discovery
+- Importing Nmap Scan Results Into MSF
+- Test your knowledge: Importing Nmap Scan Results Into MSF
+- Importing Nmap Scan Results Into MSF
+##### Enumeration
+- Port Scanning With Auxiliary Modules
+- Test your knowledge: Port Scanning With Auxiliary Modules
+- T1046 : Network Service Scanning
+- FTP Enumeration
+- Test your knowledge: FTP Enumeration
+- FTP Enumeration
+- SMB Enumeration
+- Test your knowledge: SMB Enumeration
+- Samba Recon: Basics
+- Web Server Enumeration
+- Test your knowledge: Web Server Enumeration
+- Apache Enumeration
+- MySQL Enumeration
+- Test your knowledge: MySQL Enumeration
+- MySQL Enumeration
+- SSH Enumeration
+- Test your knowledge: SSH Enumeration
+- SSH Login
+- SMTP Enumeration
+- Test your knowledge: SMTP Enumeration
+- Postfix Recon: Basics
+##### MSF
+- Vulnerability Scanning With MSF
+- Test your knowledge: Vulnerability Scanning With MSF
+##### Nessus
+- Vulnerability Scanning With Nessus
+- Test your knowledge: Vulnerability Scanning With Nessus
+##### Web Apps
+- Web App Vulnerability Scanning With WMAP
+- Test your knowledge: Web App Vulnerability Scanning With WMAP
+- Web App Vulnerability Scanning With WMAP
+##### Payloads
+- Generating Payloads With Msfvenom
+- Test your knowledge: Generating Payloads With Msfvenom
+- Encoding Payloads With Msfvenom
+- Test your knowledge: Encoding Payloads With Msfvenom
+- Injecting Payloads Into Windows Portable Executables
+- Test your knowledge: Injecting Payloads Into Windows Portable Executables
+##### Automating
+- Automating Metasploit With Resource Scripts
+- Test your knowledge: Automating Metasploit With Resource Scripts
+##### Windows Exploitation
+- Exploiting A Vulnerable HTTP File Server
+- Test your knowledge: Exploiting A Vulnerable HTTP File Server
+- Windows: HTTP File Server
+- Exploiting Windows MS17-010 SMB Vulnerability
+- Test your knowledge: Exploiting Windows MS17-010 SMB Vulnerability
+- Exploiting WinRM (Windows Remote Management Protocol)
+- Test your knowledge: Exploiting WinRM (Windows Remote Management Protocol)
+- WinRM: Exploitation with Metasploit
+- Exploiting A Vulnerable Apache Tomcat Web Server
+- Test your knowledge: Exploiting A Vulnerable Apache Tomcat Web Server
+- Windows: Java Web Server
+##### Linux Exploitation
+- Exploiting A Vulnerable FTP Server
+- Test your knowledge: Exploiting A Vulnerable FTP Server
+- Vulnerable FTP Server
+- Exploiting Samba
+- Test your knowledge: Exploiting Samba
+- Vulnerable File Sharing Service
+- Exploiting A Vulnerable SSH Server
+- Test your knowledge: Exploiting A Vulnerable SSH Server
+- Vulnerable SSH server
+- Exploiting A Vulnerable SMTP Server
+- Test your knowledge: Exploiting A Vulnerable SMTP Server
+- Vulnerable SMTP Server
+##### Post Exploitation Fundamentals
+- Meterpreter Fundamentals
+- Test your knowledge: Meterpreter Fundamentals
+- Meterpreter Basics
+- Upgrading Command Shells To Meterpreter Shells
+- Test your knowledge: Upgrading Command Shells To Meterpreter Shells
+- Upgrading Command Shells To Meterpreter Shells
+##### Windows Post Exploitation
+- Windows Post Exploitation Modules
+- Test your knowledge: Windows Post Exploitation Modules
+- Windows Post Exploitation Modules 
+- Windows Privilege Escalation: Bypassing UAC
+- Test your knowledge: Windows Privilege Escalation: Bypassing UAC
+- UAC Bypass: Memory Injection (Metasploit)
+- Windows Privilege Escalation:Token Impersonation With Incognito
+- Test your knowledge: Windows Privilege Escalation:Token Impersonation With Incognito
+- Privilege Escalation: Impersonate
+- Dumping Hashes With Mimikatz
+- Test your knowledge: Dumping Hashes With Mimikatz
+- Windows: Meterpreter: Kiwi Extension
+- Pass-the-Hash With PSExec
+- Test your knowledge: Pass-the-Hash With PSExec
+- Exploiting SMB With PsExec
+- Establishing Persistence On Windows
+- Test your knowledge: Establishing Persistence On Windows
+- Maintaining Access: Persistence Service
+- Enabling RDP
+- Test your knowledge: Enabling RDP
+- Windows: Enabling Remote Desktop
+- Windows Keylogging
+- Test your knowledge: Windows Keylogging
+- Windows: File and Keylogging
+- Clearing Windows Event Logs
+- Test your knowledge: Clearing Windows Event Logs
+- Clearing Windows Event Logs
+- Pivoting
+- Test your knowledge: Pivoting
+- Pivoting
+##### Linux Post Exploitation
+- Linux Post Exploitation Modules
+- Test your knowledge: Linux Post Exploitation Modules
+- Post Exploitation Lab I
+- Linux Privilege Escalation: Exploiting A Vulnerable Program
+- Test your knowledge: Linux Privilege Escalation: Exploiting A Vulnerable Program
+- Privilege Escalation - Rootkit Scanner
+- Dumping Hashes With Hashdump
+- Test your knowledge: Dumping Hashes With Hashdump
+- Post Exploitation Lab II
+- Establishing Persistence On Linux
+- Test your knowledge: Establishing Persistence On Linux
+- Establishing Persistence On Linux 
+##### Armitage
+Metasploit GUIs
+- Port Scanning & Enumeration With Armitage
+- Test your knowledge: Port Scanning & Enumeration With Armitage
+- Port Scanning & Enumeration with Armitage
+- Exploitation & Post Exploitation With Armitage
+- Test your knowledge: Exploitation & Post Exploitation With Armitage
+- Exploitation & Post Exploitation with Armitage
+##### Goodbye
+- Conclusion - Course Conclusion
+
+---
+
+
+---
 ### Web Application Penetration Testing
 #### Introduction to the Web and HTTP
 
