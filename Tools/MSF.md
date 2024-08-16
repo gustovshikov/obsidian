@@ -16,6 +16,7 @@ Metasploit Framework
 		2. SMB
 		3. MYSQL
 		4. SSH
+		5. SMTP
 	4. Show information gathered
 
 
@@ -111,13 +112,15 @@ http://www.pentest-standard.org/index.php/Main_Page
 
 ## Workflow_Examples
 
-### FTP
+### #FTP
+[Service info - FTP](../Services/FTP.md)
 1. `search type:auxiliary name:ftp` : find scanner for ftp version
 	1. use module on target to get service version
 2. `search type:auxiliary name:ftp` : ftp_login for brute forcing
 	1. set user file and pass file
 
-### SMB
+### #SMB
+[Service info - SMB](../Services/SMB.md)
 1. `search type:auxiliary name:smb` : smb_version scanner
 	1. use to enumerate smb on target
 2. `search type:auxiliary name:smb` : smb_enumusers
@@ -127,7 +130,8 @@ http://www.pentest-standard.org/index.php/Main_Page
 	1. can set user to admin discovered and then try passfile
 5. use [smbclient](../Services/SMB.md#smbclient) to login
 
-### WebServer
+### #WebServer
+[Service info - HTTP](../Services/HTTP.md)
 1. `search type:auxiliary name:http` : http_version
 	1. use to find the service version
 2. `search type:auxiliary name:http` : http_header
@@ -149,7 +153,8 @@ http://www.pentest-standard.org/index.php/Main_Page
 	4. `set USER_FILE /usr/share/metaspolit-framework/data/wordlists/namelist.txt`
 	5. `set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt`
 
-### MYSQL
+### #MYSQL
+[Service info - SQL](../Services/SQL.md)
 1. `search type:auxiliary name:mysql` : mysql_version
 	1. grab version information
 2. `search mysql_login` : brute force login
@@ -162,14 +167,16 @@ http://www.pentest-standard.org/index.php/Main_Page
 5. `search mysql_schemadump` : needs credentials
 	1. displays schema information
 
-### SSH
+### #SSH
+[Service info - SSH](../Services/SSH.md)
 1. `serach type:auxiliary name:ssh` : ssh_version
 	1. grab version information
 2. ssh_enumusers : enumerate users
 3. `serach type:auxiliary name:ssh` : ssh_login
 	1. brute force password login
 
-### SMTP
+### #SMTP
+[Service info - SMTP](../Services/SMTP.md)
 1. `serach type:auxiliary name:smtp` : smtp_version
 	1. grab version information
 2. `serach type:auxiliary name:smtp` : smtp_enum
