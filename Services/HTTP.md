@@ -4,6 +4,15 @@
 	3. Usage
 	4. Related Services
 2. [Tools](#Tools)
+	1. whatweb
+	2. http
+	3. dirb
+	4. browsh
+	5. lynx
+	6. curl
+	7. wget
+	8. [nmap](#nmap)
+	9. [msfconsole](#msfconsole)
 
 ---
 # Overview
@@ -56,6 +65,8 @@ grabs the page from url
 ## wget 
 grabs files from url
 
+---
+
 ## nmap
 
 ```bash
@@ -74,9 +85,10 @@ nmap -p80 --script http-enum,http-headers,http-methods,http-webdav-scan --script
 	- banner
 		- return banner, version info
 
-## msfconsole
-Metasploit Framework Console
+---
 
+## msfconsole
+### Metasploit Framework Console
 - use auxiliary/scanner/http/http_version
 	- `set rhosts 192.15.43.3`
 	- `options`
@@ -88,8 +100,18 @@ Metasploit Framework Console
 - use auxiliary/scanner/http/robots_txt
 	- `set rhosts 192.168.32.3`
 	- `run`
-- 
 
+### Userful Modules
+- auxiliary/scanner/http/apache_userdir_enum
+- auxiliary/scanner/http/brute_dirs
+- auxiliary/scanner/http/dir_scanner
+- auxiliary/scanner/http/dir_listing
+- auxiliary/scanner/http/http_put
+- auxiliary/scanner/http/files_dir
+- auxiliary/scanner/http/http_login
+- auxiliary/scanner/http/http_header
+- auxiliary/scanner/http/http_version
+- auxiliary/scanner/http/robots_txt
 
 
 

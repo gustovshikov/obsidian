@@ -11,9 +11,12 @@ Metasploit Framework
 3. [Usage](#Usage)
 	1. nmap importing or running scan
 	2. Auxiliary Modules
-	3. Workflow Examples
+	3. [Workflow Examples](#Workflow_Examples)
 		1. FTP
 		2. SMB
+		3. MYSQL
+		4. SSH
+	4. Show information gathered
 
 
 ---
@@ -106,7 +109,7 @@ http://www.pentest-standard.org/index.php/Main_Page
 
 ---
 
-## Workflow Examples
+## Workflow_Examples
 
 ### FTP
 1. `search type:auxiliary name:ftp` : find scanner for ftp version
@@ -136,6 +139,48 @@ http://www.pentest-standard.org/index.php/Main_Page
 	1. `set DICTIONARY` 
 	2. `set PATH` 
 5. files_dir : find files in directories
-6. `search type:auxiliary name:http_login` : brute force login
+6. apache_userdir_enum : look at info
+	1. `set USER_FILE /wordlists/common_users.txt`
+	2. find valid users then create a custom file to use below with users. This will let you narrow down without having to brute force nonexistent users
+7. `search type:auxiliary name:http_login` : brute force login
 	1. `set AUTH_URI` : target dir
-	2. might need to unset userpass_file if providing seperately
+	2. might need to `unset userpass_file` if providing separately
+	3. `set verbose false`
+	4. `set USER_FILE /usr/share/metaspolit-framework/data/wordlists/namelist.txt`
+	5. `set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt`
+
+### MYSQL
+1. `search type:auxiliary name:mysql` : mysql_version
+	1. grab version information
+2. `search mysql_login` : brute force login
+	1. set userpass_file and user info
+3. `search mysql_enum` : needs credentials
+	1. set *username* and *password*
+4. `search mysql_sql` : needs credentials
+	1. allows to execute sql queries
+	2. `set SQL "SHOW DATABASES;"`
+5. `search mysql_schemadump` : needs credentials
+	1. displays schema information
+
+### SSH
+1. `serach type:auxiliary name:ssh` : ssh_version
+	1. grab version information
+2. ssh_enumusers : enumerate users
+3. `serach type:auxiliary name:ssh` : ssh_login
+	1. brute force password login
+
+### SMTP
+1. `serach type:auxiliary name:smtp` : smtp_version
+	1. grab version information
+2. `serach type:auxiliary name:smtp` : smtp_enum
+	1. performs user enumeration
+
+
+---
+
+## Show information gathered
+Depends on workspace and modules ran within
+- `hosts`
+- `services`
+- `loot` : shows stuff like schema gathered
+- `creds` : shows credentials

