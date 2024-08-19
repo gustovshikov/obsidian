@@ -309,7 +309,7 @@ Conclusion - Course Conclusion
 - Conclusion - Course Conclusion
 
 ---
-#### Network-Based_Attacks
+#### [Network-Based_Attacks](../INE_EJPTv2/Host_Network_Penetration_Testing/Network_based_Attacks.md)
 - Introduction - Course Introduction
 ##### Network-Based Attacks
 - Network-Based Attacks - Part 1
@@ -332,7 +332,7 @@ Conclusion - Course Conclusion
 
 ---
 
-#### The Metasploit Framework (MSF)
+#### [The Metasploit Framework (MSF)](../INE_EJPTv2/Host_Network_Penetration_Testing/The_Metasploit_Framework.md)
 - Introduction - Course Introduction
 ##### Metasploit Framework Overview
 - Introduction to the Metasploit Framework
@@ -488,6 +488,9 @@ Metasploit GUIs
 
 
 ---
+#### Exploitation
+#### Post_Exploitation
+#### Social_engineering
 ### Web Application Penetration Testing
 #### Introduction to the Web and HTTP
 

