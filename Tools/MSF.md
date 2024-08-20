@@ -24,6 +24,8 @@ Metasploit Framework
 	8. [Meterpreter](#Meterpreter)
 		1. [Post exploitation](#Post_Exploitation)
 		2. [Post Modules](#Post_Modules)
+			1. Windows Modules
+			2. Linux_Modules
 		4. Upgrade shell to meterpreter
 	9. [Privilege Escalation](#Privilege_Escalation)
 		1. [UAC Bypass](#UAC_Bypass)
@@ -334,7 +336,7 @@ Depends on workspace and modules ran within
 - `showmount` : show hard drives
 
 ### Post_Modules
-*Useful Modules Examples*
+#### Windows_Modules
 - `search migrate` : look for migrate modules
 - `post/windows/gather/win_privs` : shows privileges you have
 - `post/windows/gather/enum_logged_on_users` : shows logged in users and SID
@@ -346,6 +348,15 @@ Depends on workspace and modules ran within
 	- `shell` : then run `systeminfo` to gather manually
 - `post/windows/gather/enum_shares` : find shares
 - `post/windows/manage/enable_rdp` : turn on RDP
+#### Linux_Modules
+- `post/linux/gather/enum_configs` : linux config files
+- `post/multi/gather/env` : OS env settings
+- `post/linux/gather/enum_network` : gather network information
+- `post/linux/gather/enum_protections` : check for security modules
+- `post/linux/gather/enum_system` : system information extensive
+- `post/linux/gather/checkcontainer` : check if container
+- `post/linux/gather/checkvm` : check if vm
+- `post/linux/gather/enum_users_history` : grab bash history for users
 
 ### Upgrade shell to meterpreter
 1. `sessions -u 1` : Auto upgrade cmd shell at session 1 to meterpreter
@@ -464,6 +475,10 @@ Windows Event Log clearing
 
 #### Pivoting-windows
 Use a machine that is connected to another network to pivot to it.
+- You can check for networks with the following commands
+	- `route` : check routing table
+	- `arp` : check arp cache
+	- `ifconfig/ipconfig` : show interfaces
 1. Get meterpreter session on target 1
 	1. `run autoroute -s <ip>/24` : add route with meterpreter
 2. `use auxiliary/scanner/portscan/tcp` : scanner
