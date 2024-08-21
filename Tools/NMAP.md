@@ -80,6 +80,7 @@
 # Nmap_Scripting_Engine_(NSE)
 Feature that allows you to write automation scripts. Nmap comes with a collection of default scripts.
 - /usr/share/nmap/scripts : Default location
+	- `ls -al /usr/share/nmap/scripts/ | grep -i ftp`
 -  extension .nse
 - written in LUA
 - -sC runs default category scripts

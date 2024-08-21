@@ -1,6 +1,6 @@
 # What is this?
 
-This is just to store notes.
+This is just to store my notes. You can clone and load into [Obsidian](https://obsidian.md/) to be able to search the entire "vault"
 
 Sections are getting built out and changing as I progress.
 
@@ -20,7 +20,7 @@ Sections are getting built out and changing as I progress.
 		1. [System/Host Based Attacks](/INE_EJPTv2/Host_Network_Penetration_Testing/System_Host_Based_Attacks.md)
 		2. [Network-Based Attacks](/INE_EJPTv2/Host_Network_Penetration_Testing/Network_Based_Attacks.md)
 		3. [The Metasploit Framework](/INE_EJPTv2/Host_Network_Penetration_Testing/The_Metasploit_Framework.md)
-		4. Exploitation
+		4. [Exploitation](/INE_EJPTv2/Host_Network_Penetration_Testing/Exploitation.md)
 		5. Post-Exploitation
 		6. Social Engineering
 	4. Web Application Penetration Testing
