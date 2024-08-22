@@ -21,7 +21,7 @@ Used to connect to securely connect to remote machines.
 - 22 : main port
 
 ## Related Services
-- vFTP
+- OpenSSH
 
 ## Usage
 `ssh -p 22 user@192.168.4.3`

@@ -7,12 +7,12 @@
 	1. [nmap](#nmap)
 	2. smbmap
 	3. nmblookup
-	4.  smbclient
+	4. smbclient
 	5. rpcclient
-	6. enum4linux
+	6. [enum4linux](#enum4linux)
 	7. [msfconsole](#msfconsole)
 	8. [hydra](#hydra)
-	9. psexec.py
+	9. [PsExec](#PsExec)
 	10. eternal blue
 
 ---
@@ -152,7 +152,9 @@ Once logged in
 - -G : Groups
 - -i : printers 
 - -r -u "admin" -p "password1" 192.34.54.3 : return users SID
-`enum4linux -a -u admin -p password1 192.168.4.3`
+```bash
+enum4linux -a -u admin -p password1 <IP>
+```
 
 ---
 
@@ -194,6 +196,7 @@ Metasploit framework
 	- payload options - meterpreter
 		- set LHOST
 		- set LPORT
+- **use auxiliary/scanner/smb/smb_enumusers**
 
 ### Example
 1. `db_nmap -sS -sV -O demo.ine.local` : scan target
@@ -217,9 +220,13 @@ Metasploit framework
 ---
 
 ## PsExec
+```bash
+python psexec.py Administrator@192.168.1.3
+```
 `psexec.py Administrator@10.34.4.3 cmd.exe` try **powershell.exe**
 - Is a lightweight telnet replacement by Microsoft.
 - Authentication is via SMB
+- There is a metasploit module for this as well, [Link](../Tools/MSF.md#Pass-The-Hash)
 
 ---
 
@@ -237,3 +244,7 @@ Metasploit framework
 # Index
 1. [Enumeration](../INE_EJPTv2/Assessment_methodologies/Enumeration)
 2. [System_Host_Based_Attacks](../INE_EJPTv2/Host_Network_Penetration_Testing/System_Host_Based_Attacks.md)
+
+
+
+

