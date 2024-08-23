@@ -54,6 +54,10 @@ First stage of penetration test. Gather passive knowledge of targets through ope
 - theharvester
 	- OSINT tool for gathering emails, names, subdomains, ip/url
 	- helps if you specify engines manually, github has list
+
+- Discover
+	- Passiv or Active
+	-  https://github.com/leebaird/discover
 ###### Active
 - dnsenum
 	- DNS records
