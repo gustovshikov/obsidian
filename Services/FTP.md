@@ -36,12 +36,14 @@ IIS FTP
 ## #hydra
 [Tool info - hydra](../Tools/Hydra.md)
 
+Can use [SMTP](SMTP.md#msfconsole) if service is available to discover user account list.
+
 Dictionary attack with *userlist* and *passlist*
 - -t : threads
 - -L : user File
 - -P : pass File
 ```bash
-hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 192.168.24.3 -t 4 ftp
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <IP> -t 4 ftp
 ```
 
 ---
@@ -51,7 +53,7 @@ hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr
 
 Scripts
 ```bash
-nmap 192.168.24.3 --script ftp-brute --script-args userdb=/root/users -p 21
+nmap <IP> --script ftp-brute --script-args userdb=/root/users -p 21
 ```
 - --script
 	- ftp-brute

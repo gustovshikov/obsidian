@@ -10,4 +10,8 @@
 ## Kali Built-in
 
 `gunzip rockyou.txt.gz` 
-/usr/share/wordlist/rockyou.txt
+`/usr/share/wordlist/rockyou.txt`
+
+### Other useful 
+`/usr/share/webshells/php`
+`/usr/share/windows-binaries/`

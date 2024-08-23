@@ -39,9 +39,9 @@ Sections are getting built out and changing as I progress.
 	1. [NMAP](Tools/NMAP.md)
 	2. [MSF](Tools/MSF.md)
 	3. [Hydra](Tools/Hydra.md)
-	4. [Netcat](/Tools/Netcat.md)
-	5. [Wordlists](Tools/Wordlists.md)
-	6. [Tmux](/Tools/Tmux.md)
+	4. [Netcat](Tools/Netcat.md)
+	5. [Kali-Resources](Tools/Kali-Resources.md)
+	6. [Tmux](Tools/Tmux.md)
 	7. [Bash](Tools/BASH.md)
 
 ---

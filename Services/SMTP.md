@@ -13,6 +13,8 @@
 # Overview
 Simple Mail Transfer Protocol
 
+Useful for [enumerating](#msfconsole) users that are on the system.
+
 ## Ports
 25
 
@@ -65,6 +67,9 @@ sendemail -f admin@attacker.xyz -t root@openmailbox.xyz -s demo.ine.local -u Fak
 ```
 
 ## msfconsole
+
+`use auxiliary/scanner/smto/smtp_enum`
+- helps find users on the system
 ### Example
 1. `db_nmap -sV -O demo.ine.local` : scan and import
 2. `search type:exploit name:haraka` : search for service found
