@@ -68,7 +68,7 @@ sendemail -f admin@attacker.xyz -t root@openmailbox.xyz -s demo.ine.local -u Fak
 
 ## msfconsole
 
-`use auxiliary/scanner/smto/smtp_enum`
+`use auxiliary/scanner/smtp/smtp_enum`
 - helps find users on the system
 ### Example
 1. `db_nmap -sV -O demo.ine.local` : scan and import
