@@ -21,7 +21,7 @@ Sections are getting built out and changing as I progress.
 		2. [Network-Based Attacks](/INE_EJPTv2/Host_Network_Penetration_Testing/Network_Based_Attacks.md)
 		3. [The Metasploit Framework](/INE_EJPTv2/Host_Network_Penetration_Testing/The_Metasploit_Framework.md)
 		4. [Exploitation](/INE_EJPTv2/Host_Network_Penetration_Testing/Exploitation.md)
-		5. Post-Exploitation
+		5. [Post-Exploitation](/INE_EJPTv2/Host_Network_Penetration_Testing/Post_Exploitation.md)
 		6. Social Engineering
 	4. Web Application Penetration Testing
 		1. Introduction to the Web and HTTP

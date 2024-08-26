@@ -574,7 +574,117 @@ Metasploit GUIs
 
 ---
 
-#### Post_Exploitation
+### Post_Exploitation
+##### Welcome
+- Introduction - Course Introduction
+##### Introduction
+##### Post-Exploitation
+- Introduction To Post-Exploitation
+- Test your knowledge: Introduction To Post-Exploitation
+- Post-Exploitation Methodology
+- Test your knowledge: Post-Exploitation Methodology
+##### Windows Enumeration
+##### Windows Local Enumeration
+- Enumerating System Information
+- Test your knowledge: Enumerating System Information
+- Enumerating System Information
+- Enumerating Users & Groups
+- Test your knowledge: Enumerating Users & Groups
+- Enumerating Users and Groups
+- Enumerating Network Information
+- Test your knowledge: Enumerating Network Information
+- Enumerating Network Information
+- Enumerating Processes & Services
+- Test your knowledge: Enumerating Processes & Services
+- Enumerating Processes and Services
+- Automating Windows Local Enumeration
+- Test your knowledge: Automating Windows Local Enumeration
+- Automating Windows Local Enumeration
+##### Linux Enumeration
+##### Linux Local Enumeration
+- Enumerating System Information
+- Test your knowledge: Enumerating System Information
+- Enumerating System Information
+- Enumerating Users & Groups
+- Test your knowledge: Enumerating Users & Groups
+- Enumerating Users and Groups
+- Enumerating Network Information
+- Test your knowledge: Enumerating Network Information
+- Enumerating Network Information
+- Enumerating Processes & Cron Jobs
+- Test your knowledge: Enumerating Processes & Cron Jobs
+- Enumerating Processes and Cron Jobs
+- Automating Linux Local Enumeration
+- Test your knowledge: Automating Linux Local Enumeration
+- Automating Linux Local Enumeration
+##### Transferring Files
+##### Transferring Files To Windows & Linux Targets
+- Setting Up A Web Server With Python
+- Test your knowledge: Setting Up A Web Server With Python
+- Setting Up A Web Server With Python
+- Transferring Files To Windows Targets
+- Test your knowledge: Transferring Files To Windows Targets
+- Transferring Files To Windows Targets
+- Transferring Files To Linux Targets
+- Test your knowledge: Transferring Files To Linux Targets
+- Transferring Files To Linux Targets
+##### Shells
+##### Upgrading Shells
+- Upgrading Non-Interactive Shells
+- Test your knowledge: Upgrading Non-Interactive Shells
+- Upgrading Non-Interactive Shells
+##### Escalation
+Windows Privilege Escalation
+- Identifying Windows Privilege Escalation Vulnerabilities
+- Test your knowledge: Identifying Windows Privilege Escalation Vulnerabilities
+- Windows Privilege Escalation
+- Test your knowledge: Windows Privilege Escalation
+- Windows: PrivescCheck
+Linux Privilege Escalation
+- Linux Privilege Escalation - Weak Permissions
+- Test your knowledge: Linux Privilege Escalation - Weak Permissions
+- Permissions Matter!
+- Linux Privilege Escalation - SUDO Privileges
+- Test your knowledge: Linux Privilege Escalation - SUDO Privileges
+- Editing Gone Wrong
+##### Persistence
+##### Windows Persistence
+- Persistence Via Services
+- Test your knowledge: Persistence Via Services
+- Persistence Via RDP
+- Test your knowledge: Persistence Via RDP
+- Maintaining Access: RDP
+##### Linux Persistence
+- Persistence Via SSH Keys
+- Test your knowledge: Persistence Via SSH Keys
+- Maintaining Access I
+- Persistence Via Cron Jobs
+- Test your knowledge: Persistence Via Cron Jobs
+- T1168: Local Job Scheduling
+##### Dumping & Cracking
+##### Dumping & Cracking Windows Hashes
+- Dumping & Cracking NTLM Hashes
+- Test your knowledge: Dumping & Cracking NTLM Hashes
+- Windows: NTLM Hash Cracking
+##### Dumping & Cracking Linux Hashes
+- Dumping & Cracking Linux Password Hashes
+- Test your knowledge: Dumping & Cracking Linux Password Hashes
+##### Pivoting Lesson
+##### Pivoting Overview
+- Pivoting
+- Test your knowledge: Pivoting
+- Pivoting
+##### Clearing
+##### Clearing Your Tracks
+- Clearing Your Tracks On Windows
+- Test your knowledge: Clearing Your Tracks On Windows
+- Clearing Your Tracks On Windows
+- Clearing Your Tracks On Linux
+- Test your knowledge: Clearing Your Tracks On Linux
+- Clearing Your Tracks On Linux
+##### Goodbye
+- Conclusion - Course Conclusion
+
 #### Social_engineering
 ### Web Application Penetration Testing
 #### Introduction to the Web and HTTP
