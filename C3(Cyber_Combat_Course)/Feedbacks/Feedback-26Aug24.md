@@ -51,13 +51,13 @@
 - Test your knowledge: Upgrading Non-Interactive Shells
 - Upgrading Non-Interactive Shells
 ##### Escalation
-Windows Privilege Escalation
+##### Windows Privilege Escalation
 - Identifying Windows Privilege Escalation Vulnerabilities
 - Test your knowledge: Identifying Windows Privilege Escalation Vulnerabilities
 - Windows Privilege Escalation
 - Test your knowledge: Windows Privilege Escalation
 - Windows: PrivescCheck
-Linux Privilege Escalation
+##### Linux Privilege Escalation
 - Linux Privilege Escalation - Weak Permissions
 - Test your knowledge: Linux Privilege Escalation - Weak Permissions
 - Permissions Matter!
