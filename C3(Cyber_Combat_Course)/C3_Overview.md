@@ -574,7 +574,7 @@ Metasploit GUIs
 
 ---
 
-### Post_Exploitation
+#### [Post_Exploitation](../INE_EJPTv2/Host_Network_Penetration_Testing/Post_Exploitation.md)
 ##### Welcome
 - Introduction - Course Introduction
 ##### Introduction
@@ -685,11 +685,66 @@ Linux Privilege Escalation
 ##### Goodbye
 - Conclusion - Course Conclusion
 
+---
+
 #### Social_engineering
-### Web Application Penetration Testing
-#### Introduction to the Web and HTTP
+##### Welcome
+- Introduction - Course Introduction
+##### Social Engineering
+- Introduction to Social Engineering
+- Test your knowledge: Introduction to Social Engineering
+- Pretexting
+- Test your knowledge: Pretexting
+- Phishing with Gophish - Part 1
+- Phishing with Gophish - Part 2
+- Test your knowledge: Phishing with Gophish - Part 2
+- Let's Go Phishing
+##### Goodbye
+- Conclusion - Course Conclusion
 
 ---
+
+### Web Application Penetration Testing
+#### Introduction to the Web and HTTP
+##### Welcome
+- Introduction - Course Introduction
+##### Web Applications
+##### Introduction to Web App Security Testing
+- Introduction to Web Application Security
+- Test your knowledge: Introduction to Web Application Security
+- Web Application Security Testing
+- Test your knowledge: Web Application Security Testing
+- Common Web Application Threats & Risks
+- Test your knowledge: Common Web Application Threats & Risks
+##### Web Application Architecture & Components
+- Web Application Architecture
+- Test your knowledge: Web Application Architecture
+- Web Application Technologies - Part 1
+- Web Application Technologies - Part 2
+- Test your knowledge: Web Application Technologies - Part 2
+##### HTTP Protocol
+##### HTTP/S Protocol Fundamentals
+- Introduction to HTTP
+- Test your knowledge: Introduction to HTTP
+- HTTP Requests - Part 1
+- HTTP Requests - Part 2
+- Test your knowledge: HTTP Requests - Part 2
+- HTTP Responses
+- Test your knowledge: HTTP Responses
+- HTTP Basics Lab - Part 1
+- HTTP Basics Lab - Part 2
+- Test your knowledge: HTTP Basics Lab - Part 
+- HTTP Method Enumeration
+- HTTPS
+- Test your knowledge: HTTPS
+##### Website Crawling & Spidering
+- Passive Crawling & Spidering with Burp Suite & OWASP ZAP
+- Passive Crawling with Burp Suite
+##### Goodbye
+- Conclusion - Course Conclusion
+
+---
+
 ### TryHackMe 
 #### Junior Penetration Tester Path
 - Introduction to Pentesting
@@ -778,6 +833,7 @@ Linux Privilege Escalation
 	- Python Basics
 
 ---
+
 #### Offensive Pentesting Path
 - Buffer Overflow Exploitation
 	- Buffer Overflow prep - Task 1
@@ -797,6 +853,8 @@ Linux Privilege Escalation
 	- Credentials Harvesting
 - Extra Credit
 	- Hacking With PowerShell
+
+---
 
 ## #Blue_Phase
 ### Security Blue Team - BTL1
