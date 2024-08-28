@@ -24,7 +24,7 @@ Sections are getting built out and changing as I progress.
 		5. [Post-Exploitation](/INE_EJPTv2/Host_Network_Penetration_Testing/Post_Exploitation.md)
 		6. Social Engineering
 	4. Web Application Penetration Testing
-		1. Introduction to the Web and HTTP
+		1. [Introduction to the Web and HTTP](INE_EJPTv2/Web_and_HTTP.md)
 3. Services
 	1. [SMB](Services/SMB.md)
 	2. [FTP](Services/FTP.md)

