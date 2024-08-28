@@ -54,6 +54,13 @@ First stage of penetration test. Gather passive knowledge of targets through ope
 - theharvester
 	- OSINT tool for gathering emails, names, subdomains, ip/url
 	- helps if you specify engines manually, github has list
+- ffuf
+	- brute-force subdomain, CDN blocks this
+	- `ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.10.190.205 -fs <size>`
+	- -fs {size} : replace from the most occurring size when ran without
+	- -w : wordlist
+	- -H add/edits a header, FUZZ keyword in spot 
+	- -u : url
 
 - Discover
 	- Passiv or Active

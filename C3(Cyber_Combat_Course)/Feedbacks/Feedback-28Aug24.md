@@ -35,3 +35,13 @@
 - Passive Crawling with Burp Suite
 ##### Goodbye
 - Conclusion - Course Conclusion
+
+# TryHackMe 
+#### Junior Penetration Tester Path
+- Introduction to Pentesting
+	- Pentesting Fundamentals
+	- Principles of Security
+- Intro to Web Hacking
+	- walking an application
+	- Content Discovery
+	- Subdomain Enumeration

@@ -25,6 +25,10 @@ HTTPS
 - Using Components with Known Vulnerabilities
 - Broken Access Control
 
+# Tools
+- Burp Suite
+- OWASP ZAP
+
 ---
 
 # Web Application Technologies
