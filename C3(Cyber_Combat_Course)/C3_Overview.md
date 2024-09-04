@@ -16,11 +16,11 @@
 			2. Host & Network Auditing
 			3. Host & Network Penetration Testing
 			4. Web Application Penetration Testing
-		2. TryHackMe 2
+		2. [TryHackMe 2](#TryHackMe_2)
 			1. Junior Penetration Tester Path
 		3. Youtube Playlist
 			1. Buffer Overflows Made Easy
-		4. TryHackMe 3
+		4. [TryHackMe 3](#TryHackMe_3)
 			1. Complete Beginner's Path
 			2. Offensive Pentesting Path
 	4. [Blue Phase](#Blue_Phase)
@@ -745,7 +745,7 @@ Linux Privilege Escalation
 
 ---
 
-### TryHackMe 
+### TryHackMe_2
 #### Junior Penetration Tester Path
 - Introduction to Pentesting
 	- Pentesting Fundamentals
@@ -792,7 +792,7 @@ Linux Privilege Escalation
 2. https://www.youtube.com/watch?v=qSnPayW6F7U&list=PLLKT__MCUeix3O0DPbmuaRuR_4Hxo4m3G 
 
 ---
-### TryHackMe 
+### TryHackMe_3
 #### Complete Beginners Path
 - Compete Begginer Intro
 	- Tutorial

@@ -1,4 +1,7 @@
-Scripts to spawn shell
+# Resources
+- http://www.revshells.com
+
+---
 
 # Python3
 ```python

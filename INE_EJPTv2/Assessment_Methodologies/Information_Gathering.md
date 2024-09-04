@@ -125,5 +125,6 @@ ffuf -w users.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/
 	- shows what site was built with & what is running
 - Wappalyzer - requires account?
 	- identifies technologies on website
+- FoxyProxy
 
 
