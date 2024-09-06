@@ -7,4 +7,3 @@
 - Privilege escalation
 	- What is the Shell?
 	- Linux Privilege Escalation
-

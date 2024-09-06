@@ -785,9 +785,11 @@ Linux Privilege Escalation
 	- Metasploit: Exploitation
 	- Metasploit: Meterpreter
 - Privilege escalation
+	- What the Shell?
 	- Linux Privilege Escalation
 	- Windows Privilige Escalation
 - Tunneling
+- DNS Manipulation
 
 ---
 ### Youtube
