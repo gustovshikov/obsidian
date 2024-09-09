@@ -1,5 +1,6 @@
 # Resources
 - http://www.revshells.com
+- https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/linux
 
 ---
 
