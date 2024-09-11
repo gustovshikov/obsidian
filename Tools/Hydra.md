@@ -7,6 +7,7 @@ Brute force logins
 - -p/P : password/password File
 
 ---
+
 # Service Examples
 
 ## SMB
@@ -17,6 +18,7 @@ Brute force logins
 - -P /wordlist.txt : pass in wordlist
 
 ---
+
 ## FTP
 dictionary attack with *userlist* and *passlist*
 ```bash
@@ -24,9 +26,12 @@ hydra -L /usr/share/metasploit-framework/data/wordlist/common_users.txt -P /usr/
 ```
 
 ---
+
 ## SSH
 dictionary attack
 `hydra -l student -P /usr/share/wordlist/rockyou.txt 192.168.7.3 ssh`
+
+---
 
 ## Http-Form
 http-post-form "login page : post data : error check"

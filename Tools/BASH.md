@@ -4,3 +4,15 @@ Youtube
 - [Bash in 100 Seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
 - [Beginner's Guide to the Bash Terminal](https://www.youtube.com/watch?v=oxuRxtrO2Ag)
 
+---
+
+# Useful Stuffs
+
+- `!!` : grab previous command, useful for `sudo !!`
+- `!$` : grab previous command args
+- `!:3` : grab third argument
+	- `!:1-2`
+- `echo $0` : shows shell running
+
+
+- `grep -v -E '/proc | /sys'` : exclude /proc or /sys from output

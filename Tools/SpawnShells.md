@@ -4,6 +4,8 @@
 
 ---
 
+`python -c 'import pty; pty.spawn("/bin/sh")'`
+
 # Python3
 ```python
 import subprocess

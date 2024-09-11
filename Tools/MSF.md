@@ -358,6 +358,10 @@ Depends on workspace and modules ran within
 	- `shell` : then run `systeminfo` to gather manually
 - `post/windows/gather/enum_shares` : find shares
 - `post/windows/manage/enable_rdp` : turn on RDP
+
+- `load powershell` : load powershell then launch
+	- `powershell_shell`
+
 #### Linux_Modules
 - `post/linux/gather/enum_configs` : linux config files
 - `post/multi/gather/env` : OS env settings

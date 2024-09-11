@@ -11,6 +11,8 @@
 
 - `gunzip rockyou.txt.gz` 
 - `/usr/share/wordlist/rockyou.txt`
+- /usr/share/seclists/
+	- apt install seclists
 
 ### Other useful 
 - `/usr/share/webshells/php`

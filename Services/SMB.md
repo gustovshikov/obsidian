@@ -8,12 +8,13 @@
 	2. smbmap
 	3. nmblookup
 	4. smbclient
-	5. rpcclient
-	6. [enum4linux](#enum4linux)
-	7. [msfconsole](#msfconsole)
-	8. [hydra](#hydra)
-	9. [PsExec](#PsExec)
-	10. eternal blue
+	5. smbget
+	6. rpcclient
+	7. [enum4linux](#enum4linux)
+	8. [msfconsole](#msfconsole)
+	9. [hydra](#hydra)
+	10. [PsExec](#PsExec)
+	11. eternal blue
 
 ---
 # #Overview 
@@ -62,6 +63,11 @@ uid=1000,gid=1000,credentials=/etc/samba/user.conf    0 0
 [nmap information](../Tools/NMAP)
 ### Scripts
 Available in default folder */user/share/nmap/scripts*
+
+```bash
+nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse <IP>
+```
+
 **--script**
 - smb-os-discovery
 	- shows os information like hostname
@@ -129,6 +135,15 @@ can be used to show contents, upload, and download files from SMB service runnin
 	- get flag
 - -U : username
 - `? to list help on terminal`
+
+---
+
+## smbget
+can recursively download SMB shares
+
+```bash
+smbget -R smb://10.10.205.103/anonymous
+```
 
 ---
 
