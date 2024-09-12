@@ -2,6 +2,9 @@
 # Overview
 Part of the common LAMP stack. (Linux, Apache, MySQL, PHP) Can also be windows based with WAMP
 
+Useful Files
+`../Configuration.php` : can contain password information
+
 # Tools
 ## Website enumeration
 `http://<target>/phpinfo.php` : can see if php file is leftover from installation
