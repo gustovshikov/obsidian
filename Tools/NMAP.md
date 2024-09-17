@@ -87,6 +87,8 @@ Feature that allows you to write automation scripts. Nmap comes with a collectio
 	- based on open ports found
 	- --script-help=mongodb-databases : information on script
 	- --script=mongodb-info : run specific script, category, directory
+
+`--script vuln` : trys to find vulnerabilities
 ## Service Specific
 1. [SMB information](../Services/SMB.md#NMAP)
 # Firewall_Avoidance
