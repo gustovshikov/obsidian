@@ -8,7 +8,7 @@ Youtube
 
 # Useful Stuffs
 
-- `!!` : grab previous command, useful for `sudo !!`
+- `!!` : grab previous command, useful for adding `sudo !!`
 - `!$` : grab previous command args
 - `!:3` : grab third argument
 	- `!:1-2`

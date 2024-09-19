@@ -26,41 +26,32 @@ Sections are getting built out and changing as I progress.
 	4. Web Application Penetration Testing
 		1. [Introduction to the Web and HTTP](INE_EJPTv2/Web_and_HTTP.md)
 3. Services
-	1. [SMB](Services/SMB.md)
+	1. [ActiveDirectory](Services/ActiveDirectory.md)
 	2. [FTP](Services/FTP.md)
 	3. [HTTP](Services/HTTP.md)
-	4. [PHP](Services/PHP.md)
-	5. [SQL](Services/SQL.md)
-	6. [SSH](Services/SSH.md)
+	4. [IIS-WebDav](Services/IIS-WebDav.md)
+	5. [NFS](Services/NFS.md)
+	6. [PHP](Services/PHP.md)
 	7. [RDP](Services/RDP.md)
-	8. [IIS-WebDav](Services/IIS-WebDav.md)
-	9. [WinRM](Services/WinRM.md)
-	10. [SMTP](Services/SMTP.md)
-4. Tools
-	1. [NMAP](Tools/NMAP.md)
-	2. [MSF](Tools/MSF.md)
-	3. [Hydra](Tools/Hydra.md)
-	4. [Netcat](Tools/Netcat.md)
+	8. [SMB](Services/SMB.md)
+	9. [SMTP](Services/SMTP.md)
+	10. [SQL](Services/SQL.md)
+	11. [SSH](Services/SSH.md)
+	12. [WinRM](Services/WinRM.md)
+	13. [Wordpress](Services/Wordpress.md)
+5. Tools
+	1. [Bash](Tools/BASH.md)
+	2. [Buffer-Overflow](Tools/Buffer-Overflow.md)
+	3. [Cracking](Tools/Cracking.md)
+	4. [Hydra](Tools/Hydra.md)
 	5. [Kali-Resources](Tools/Kali-Resources.md)
-	6. [Tmux](Tools/Tmux.md)
-	7. [Bash](Tools/BASH.md)
-
----
-
-1. TryHackMe EJPT
-	1. Introduction to Pentesting
-	2. Intro to Web Hacking
-	3. Burp Suite
-	4. Network Security
-	5. Vulnerability Research
-	6. Privilege Escalation
-	7. Tunneling
-2. Youtube playlist
-	1. Buffer Overflows Made Easy
-3. TryHackMe
-	1. Complete Beginners Path
-	2. Offenseive Pentesting Path
-4. Security_BTL1
+	6. [MSF](Tools/MSF.md)
+	7. [Netcat](Tools/Netcat.md)
+	8. [NMAP](Tools/NMAP.md)
+	9. [Socat](Tools/Socat.md)
+	10. [SpawnShells](Tools/SpawnShells.md)
+	11. [Tmux](Tools/Tmux.md)
+6. Security_BTL1
 	1. Introduction to Security Fundamentals
 	2. Phishing Analysis
 	3. Threat Intelligence
@@ -68,7 +59,4 @@ Sections are getting built out and changing as I progress.
 	5. Security Event and Information Monitoring (SEIM)
 	6. Incident Response
 	7. Practice Boxes
-5. TryHackMe
-	1. SOC Level 1
-	2. Cyber Defense
 
