@@ -7,6 +7,10 @@
 | $5    | SHA-256          |
 | $6    | SHA-512          |
 
+Some online websites can crack as well
+[Cyberchef](https://gchq.github.io/CyberChef/)
+[Crackstation](https://crackstation.net/)
+
 ## Cracking
 - Unshadow file to cleanup "shadow" file for John. Needs `passwd` and `shadow` files
 	- `unshadow [path to passwd] [path to shadow]`

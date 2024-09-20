@@ -1,6 +1,7 @@
 # Resources
 - [Hacktricks Reverse Shells](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/linux)
 - [RevShells](https://www.revshells.com/)
+- https://pentestmonkey.net/category/tools/web-shells
 - [Payloads All The Things - Repo](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - [Socat](https://linux.die.net/man/1/socat)
 - [Netcat](../../Tools/Netcat.md)
