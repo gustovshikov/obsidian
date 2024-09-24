@@ -60,7 +60,7 @@ In redirection commands, the numbers `0`, `1`, and `2` refer to these file descr
 ### Redirection Examples:
 
 1. **`0`: Redirecting `stdin`**
-    
+
     - `command < file` — Redirects the contents of `file` to the command's `stdin`.
         
         - Example: `cat < input.txt` — The file `input.txt` is used as input to the `cat` command.
@@ -84,15 +84,10 @@ In redirection commands, the numbers `0`, `1`, and `2` refer to these file descr
         - `2>&1` means "redirect `stderr` (2) to wherever `stdout` (1) is currently going." This is often used when you want to capture both normal output and error messages in the same file or stream.
         
         Example:
-        
-        sh
-        
-        Copy code
-        
-        `command > output.txt 2>&1`
-        
+        ```sh
+        command > output.txt 2>&1
+        ```
         This command redirects both the standard output and the standard error to `output.txt`.
-        
 
 ### Example: Understanding `0>&1`, `2>&1`, etc.
 
@@ -104,15 +99,11 @@ Let’s break down common redirection patterns involving file descriptors:
     
 - **`1>&2`**: This redirects `stdout` (1) to `stderr` (2), sending normal output to the same place as errors are sent. It's less common but can be useful if you want to distinguish between different types of output and error messages.
     
-
 ### Real-World Use Case Example:
 
-bash
-
-Copy code
-
-`ls non_existent_file > output.txt 2>&1`
-
+```bash
+ls non_existent_file > output.txt 2>&1
+```
 - `ls non_existent_file`: This attempts to list a non-existent file and will produce an error message.
 - `> output.txt`: Redirects `stdout` to `output.txt`.
 - `2>&1`: Redirects `stderr` to the same place as `stdout`, meaning any error messages will also be written to `output.txt`.
