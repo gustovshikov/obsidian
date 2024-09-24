@@ -18,3 +18,13 @@ This will forward traffic from blocked firewall on the target machine to your lo
 ssh -L 10000:localhost:10000 <username>@<ip>
 ```
 
+# ssh-keygen
+
+- `-t` : keytype
+- `-b` : sets the key size to 4096 bits
+- `-C` : optional comment to help identify
+
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```

