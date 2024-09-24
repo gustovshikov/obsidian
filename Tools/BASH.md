@@ -1,4 +1,12 @@
-Watch some videos. Honestly you need to be hands on and running commands all the time in order to build up the experience and muscle memory to remember them. Its overwhelming at first but you will eventually hit a point where you know all the main shit and you look back thinking it wasn't as crazy as your past self thought.
+# Table of content
+1. [Info](#Info)
+2. [Useful_Stuffs](#Useful_Stuffs)
+3. [Input-Redirection](#Input-Redirection)
+
+---
+
+# Info
+Bourne again shell (bash)
 
 Youtube
 - [Bash in 100 Seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
@@ -6,16 +14,36 @@ Youtube
 
 ---
 
-# Useful Stuffs
+# Useful_Stuffs
 
+## Arguments
 - `!!` : grab previous command, useful for adding `sudo !!`
 - `!$` : grab previous command args
 - `!:3` : grab third argument
 	- `!:1-2`
-- `echo $0` : shows shell running
 
+## Misc
+- `echo $0` : shows shell running
 - `grep -v -E '/proc | /sys'` : exclude /proc or /sys from output
 
+## Pipeline
+When you use the pipe (`|`), the shell redirects the **stdout** (standard output, file descriptor `1`) of the command on the left of the pipe to the **stdin** (standard input, file descriptor `0`) of the command on the right.
+
+`command1 | command2`
+```bash
+cat file.txt | grep "search_string"
+```
+
+## Tee
+You can use the `tee` command to send **stderr** and **stdout** to a file and then still continue a pipeline.
+
+This creates a *file_list.txt* and then continues
+```bash
+ls -l | tee files_list.txt | wc -l
+```
+
+
+---
 
 # Input-Redirection
 

