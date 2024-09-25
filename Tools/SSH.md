@@ -12,7 +12,7 @@ Usage:
 ssh -L [local_port]:[remote_host]:[remote_port] [user]@[ssh_server]
 ```
 
-This will forward local traffic that is not accessable on localhost:8080 of the target machine back to your port 9090
+This will forward traffic to your machines 9090 to teh remote machines 8080
 ```bash
 ssh -L 9090:localhost:8080 <username>@<ip>
 ```
