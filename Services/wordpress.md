@@ -1,4 +1,9 @@
-Blog CMS
+# Info 
+Popular Blog CMS
+
+check website location (`/var/www/html/wordpress`) for config file for database login information. `wp-config.php` 
+
+---
 
 # wpscan
 

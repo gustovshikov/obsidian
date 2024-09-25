@@ -26,6 +26,8 @@ Used to connect to securely connect to remote machines.
 ## Usage
 `ssh -p 22 user@192.168.4.3`
 
+[Tool page](../Tools/SSH.md)
+
 ---
 
 # #Tools

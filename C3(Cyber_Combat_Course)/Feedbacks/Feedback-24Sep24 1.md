@@ -1,0 +1,4 @@
+# TryHackMe
+- Daily Bugle
+- Internal
+

