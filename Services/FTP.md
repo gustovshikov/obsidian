@@ -26,6 +26,8 @@ File sharing protocol used by different services
 - When connected
 	- status : show information on connection
 	- passive : toggle passive mode
+	- binary : change from ascii mode to binary mode
+	- prompt off : 
 
 ## Related Services
 vsftp
