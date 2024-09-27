@@ -23,6 +23,9 @@ File sharing protocol used by different services
 - anonymous login
 	- user: anonymous
 	- pass: null : just hit enter
+- When connected
+	- status : show information on connection
+	- passive : toggle passive mode
 
 ## Related Services
 vsftp
