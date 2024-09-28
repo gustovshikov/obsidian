@@ -8,7 +8,9 @@ users
 pass
 - /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 - /usr/share/metasploit-framework/data/wordlists/common_passwords.txt
-
+- /usr/share/wordlists/rockyout.txt
+dir
+- /usr/share/wordlists/dirb/big.txt
 
 ---
 

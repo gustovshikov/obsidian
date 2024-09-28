@@ -29,6 +29,13 @@ Relational database that is used by a lot of websites to store data.
 - `help;` : help menu
 - `select load_file("/etc/shadow");` : can see dir access by user from msfconsole mysql_writable_dirs
 
+### Commands
+Once logged in with mysql move round and view the information.
+1. SHOW databases;
+2. USE **staff**;
+3. SHOW tables;
+4. SELECT * FROM **login**
+
 ## Related Services
 - MySql : database
 - PostgreSql : database
@@ -36,9 +43,6 @@ Relational database that is used by a lot of websites to store data.
 - MSSql : Microsoft SQL
 
 ---
-
-# Tests
-- 
 
 # #Tools
 

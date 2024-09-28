@@ -8,7 +8,6 @@ https://github.com/milesrack/bufferoverflowprep?tab=readme-ov-file
 
 # gdb
 
-
 # Brainstorm walkthrough
 
 Generate a reference pattern with a specified length to fuzz with.
@@ -90,7 +89,7 @@ except:
 
 In bottom command line of immunity debugger run `!mona modules`. This will pop up a windows to check for security measures. Can also run `!mona find -s "\xff\xe4" -m essfunc.dll` to check for a jump esp.
 
-![](../Assets/Images/immunity-follow-button.png)
+![](../Assets/images/immunity-follow-button.png)
 Search for the "JMP ESP". Click on it and hit *F2* to set a breakpoint so that when you run the script below on the app it will break at that point.
 
 ```python
