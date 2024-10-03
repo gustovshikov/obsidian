@@ -5,6 +5,7 @@ This is just to store my notes. You can clone and load into [Obsidian](https://o
 Sections are getting built out and changing as I progress.
 
 ---
+
 # Table of Contents
 1. C3 (Cyber Combat Course)
 	1. [Overview](C3(Cyber_Combat_Course)/C3_Overview.md)
