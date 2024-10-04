@@ -59,8 +59,8 @@ Sections are getting built out and changing as I progress.
 	15. [Tmux](Tools/Tmux.md)
 	16. [Transfer-Files](Tools/Transfer-Files.md)
 6. Security_BTL1
-	1. Introduction to Security Fundamentals
-	2. Phishing Analysis
+	1. [Introduction to Security Fundamentals](Security_BTL1/BTL1.md#Security-Fundamentals)
+	2. [Phishing Analysis](Security_BTL1/BTL1.md#Phishing-Analysis)
 	3. Threat Intelligence
 	4. Digital Forensics
 	5. Security Event and Information Monitoring (SEIM)

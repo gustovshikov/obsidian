@@ -1,13 +1,17 @@
 # Domains
 
-1. **🛠️ Security Fundamentals**
-2. **🎣 Phishing Analysis**
-3. **🧠 Threat Intelligence**
-4. **🕵️ Digital Forensics**
-5. **📊 Security Information and Event Management**
-6. **⏱️ Incident Response**
+1. [**🛠️ Security Fundamentals**](#Security-Fundamentals)
+2. [**🎣 Phishing Analysis**](#Phishing-Analysis)
+	1. Types
+	2. Tactics
+3. [**🧠 Threat Intelligence**](#Threat-Intelligence)
+4. [**🕵️ Digital Forensics**](#Digital-Forensics)
+5. [**📊 Security Information and Event Management**](#Security-Information-and-Event-Management)
+6. [**⏱️ Incident Response**](#Incident-Response)
 
-# Security Fundamentals
+---
+
+# Security-Fundamentals
 
 1. Physical Security
 	1. Access Controls
@@ -39,7 +43,7 @@
 
 ---
 
-#  Phishing Analysis
+#  Phishing-Analysis
 
 ## Types
 - Recon Emails
@@ -91,3 +95,24 @@
 		- uses different char encoding that looks identical to the eye
 		- Latin “o” and the Cyrillic “o”
 - Sender Spoofing
+
+---
+
+# Threat-Intelligence
+
+
+---
+
+# Digital-Forensics
+
+
+---
+
+# Security-Information-and-Event-Management
+
+
+---
+
+# Incident-Response
+
+
