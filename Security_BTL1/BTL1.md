@@ -95,6 +95,48 @@
 		- uses different char encoding that looks identical to the eye
 		- Latin “o” and the Cyrillic “o”
 - Sender Spoofing
+	- spoof from field in email header
+- Hyperlinks
+	- embedded malicious links
+- Business Email Compromise
+## Investigating
+- Artifacts
+	- Email Info
+		- sending address
+		- subject line
+		- recipient address
+		- server ip & reverse DNS
+		- Reply-To adress
+		- date & time
+	- File Info
+		- name
+		- hash
+	- Web Info
+		- urls
+		- root domains
+## Defensive
+- Security Technology
+	- SPF (sender policy framework)
+		- type of DNS TXT record, shows allowed domains
+	- DKIM (domain keys identified mail)
+		- hash check for integrity of email
+	- DMARC (domain-based message authentication, reporting & conformance)
+		- builds on SPF & DKIM, allows to specify what happens when checks are failed.
+- Spam Filter
+	- content
+	- rule-based
+	- Bayesian
+	- attachment
+	- sandboxing
+
+## Tools
+- URL2PNG
+- URLScan
+- VirusTotal
+- ThreatFeeds
+- Talos File Reputation
+- Hybrid Analysis
+- PhishTool
 
 ---
 
