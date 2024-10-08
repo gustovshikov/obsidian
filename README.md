@@ -62,8 +62,8 @@ Sections are getting built out and changing as I progress.
 6. Security_BTL1
 	1. [Introduction to Security Fundamentals](Security_BTL1/BTL1.md#Security-Fundamentals)
 	2. [Phishing Analysis](Security_BTL1/BTL1.md#Phishing-Analysis)
-	3. Threat Intelligence
-	4. Digital Forensics
+	3. [Threat Intelligence](Security_BTL1/BTL1.md#Threat-Inteligence)
+	4. [Digital Forensics](Security_BTL1/BTL1.md#Digital-Forensics)
 	5. Security Event and Information Monitoring (SEIM)
 	6. Incident Response
 	7. Practice Boxes
