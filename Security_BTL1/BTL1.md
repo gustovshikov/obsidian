@@ -203,13 +203,14 @@
 	- developed by Lockheed Martin
 - pyramid of pain
 	- From top to bottom.
-						- TTPs
-					- Tools -----
-				- Network/Host Artifacts
-			- Domain Names ---------------
-		- Ip Adress --------------------------
+```
+	                    - TTPs
+	                - Tools -----
+	            - Network/Host Artifacts
+	        - Domain Names ---------------
+	    - Ip Adress --------------------------
 	- Hash value ---------------------------------
-
+```
 
 ---
 
