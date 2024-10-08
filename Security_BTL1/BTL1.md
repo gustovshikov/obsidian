@@ -128,7 +128,19 @@
 	- Bayesian
 	- attachment
 	- sandboxing
-
+- Blocking Artifacts
+	- Email sender
+	- Sender domain
+	- sender server ip
+	- subject line
+- Blocking File Artifacts
+	- hashes
+	- names
+## Report Writing
+- Artifacts collected
+	- Sanitize artifacts
+- Tools used and results
+- Defensive measures taken
 ## Tools
 - URL2PNG
 - URLScan
@@ -141,6 +153,62 @@
 ---
 
 # Threat-Intelligence
+“threat intelligence is information that an organization uses to understand the threats that are currently targeting them, or could target them in the future”
+
+## Types of Intelligence
+- SIGINT
+	- Signal intelligence
+	- COMINT - communication intel
+	- ELINT - electronic intel
+- OSINT
+	- Open-source intel
+- HUMINT
+	- Human intel
+- GEOINT
+	- geospatial intel
+## Types of Threat Intelligence
+- Strategic Threat Intel
+	- Motives/Goals of group
+- Operational Threat Intel
+	- TTP - Tactics Techniques and Procedures
+- Tactical Threat Intel
+	- Technical in nature
+	- IOC's
+## Threat Actors
+- Common Threat Agents
+	- Cyber Criminals
+	- Nation-States
+	- Hacktivists
+	- Insider Threat
+- Actor Motivation
+	- Financial
+	- Political
+	- Social
+	- Unknown
+- APT
+	- Advanced Persistent Threats
+	- Usualy backed by nation states
+- TTP
+	- Tool, Techniques, and Procedures
+## Operational Threat Intel
+- Precursors
+	- port scanning & fingerprinting services
+	- Social Engineering
+	- OSINT sources and messaging
+- IOC Formating
+	- STIX - Structured Threat Information eXpression
+	- TAXII - Trusted Automated eXchange of Intelligence Information
+- MITRE’s Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK)
+- The Cyber Kill Chain (CKC)
+	- developed by Lockheed Martin
+- pyramid of pain
+	- From top to bottom.
+						- TTPs
+					- Tools -----
+				- Network/Host Artifacts
+			- Domain Names ---------------
+		- Ip Adress --------------------------
+	- Hash value ---------------------------------
 
 
 ---
