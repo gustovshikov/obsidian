@@ -215,7 +215,19 @@
 ---
 
 # Digital-Forensics
-
+## Forensics Fundamentals
+- Data Representation
+	- Binary
+	- Base64
+	- Hexadecimal
+	- Octal
+	- ASCII
+- File Systems
+	- FAT16
+	- FAT32
+	- NTFS
+	- EXT3 / EXT4
+- 
 
 ---
 
