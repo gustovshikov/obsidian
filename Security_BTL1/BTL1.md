@@ -227,7 +227,39 @@
 	- FAT32
 	- NTFS
 	- EXT3 / EXT4
-- 
+- Order of Volatility
+	1. Registers & Cache
+	2. Memory
+	3. Disk
+	4. Remote Logging and Monitoring Data
+	5. Physical Configuration
+		1. Network Topology
+		2. Archival Media
+- Recovering data
+	- Scalpel
+- File Analysis
+	- exiftool
+- Browser Artifacts
+- Windows logs
+	- `C:\Windows\System32\winevt\Logs`
+## Memory Analysis with Volatility
+[Volatility Tool Info](../System_Analysis/Volatility.md)
+
+## Tools
+**Linux**
+- Scalpel
+- exiftool
+- steghide
+- nikto
+- LiME
+- memdump
+- **volatility**
+**Windows**
+- FTK imager
+- KAPE: the Kroll Artifact Parser and Extractor
+- PECmd.exe
+- Windows File Analyzer
+- JumpListExploreer
 
 ---
 
