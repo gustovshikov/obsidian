@@ -386,4 +386,20 @@ supported platforms
 
 # Incident-Response
 
+## Event vs Incident
+I gave up
+
+---
+
+# BTL1 Exam Preparation
+
+Tools you will use
+- Splunk
+- Autopsy
+- Wireshark
+- DeepBlueCLI
+- Email Analysis
+- RDP
+
+
 
